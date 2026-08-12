@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://sazvara.ir/</loc></url>
-<url><loc>https://sazvara.ir/services/</loc></url>
-<url><loc>https://sazvara.ir/work/</loc></url>
-<url><loc>https://sazvara.ir/ai-builder-os/</loc></url>
-<url><loc>https://sazvara.ir/sajjad/</loc></url>
-<url><loc>https://sazvara.ir/contact/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url><loc>https://sazvara.ir/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/"/></url>
+<url><loc>https://sazvara.ir/fa/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/"/></url>
+<url><loc>https://sazvara.ir/services/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/services/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/services/"/></url>
+<url><loc>https://sazvara.ir/fa/services/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/services/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/services/"/></url>
+<url><loc>https://sazvara.ir/work/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/work/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/work/"/></url>
+<url><loc>https://sazvara.ir/fa/work/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/work/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/work/"/></url>
+<url><loc>https://sazvara.ir/ai-builder-os/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/ai-builder-os/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/ai-builder-os/"/></url>
+<url><loc>https://sazvara.ir/fa/ai-builder-os/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/ai-builder-os/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/ai-builder-os/"/></url>
+<url><loc>https://sazvara.ir/sajjad/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/sajjad/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/sajjad/"/></url>
+<url><loc>https://sazvara.ir/fa/sajjad/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/sajjad/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/sajjad/"/></url>
+<url><loc>https://sazvara.ir/contact/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/contact/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/contact/"/></url>
+<url><loc>https://sazvara.ir/fa/contact/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/contact/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/contact/"/></url>
 </urlset>
