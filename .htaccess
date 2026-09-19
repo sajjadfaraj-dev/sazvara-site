@@ -10,3 +10,19 @@ Header always set Referrer-Policy "strict-origin-when-cross-origin"
 Header always set X-Frame-Options "SAMEORIGIN"
 Header always set Strict-Transport-Security "max-age=15552000"
 </IfModule>
+
+# Sazvara Quality v1 — safe static-site hardening/caching
+<IfModule mod_headers.c>
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+Header always set X-Permitted-Cross-Domain-Policies "none"
+<FilesMatch "^404\\.html$">
+Header always set X-Robots-Tag "noindex, follow"
+</FilesMatch>
+<FilesMatch "\\.(css|js)$">
+Header set Cache-Control "public, max-age=3600, stale-while-revalidate=86400"
+</FilesMatch>
+<FilesMatch "\\.(xml|txt)$">
+Header set Cache-Control "public, max-age=300, must-revalidate"
+</FilesMatch>
+</IfModule>
+

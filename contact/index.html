@@ -1,24 +1,25 @@
 <!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>System Diagnostic — Sazvara</title><meta name="description" content="Start a Sazvara system diagnostic by describing the existing system, problem and desired outcome.">
+<title>System Diagnostic — Sazvara</title><meta name="description" content="Request a Sazvara system diagnostic by describing the current system, problem, desired outcome and constraints.">
 <meta name="theme-color" content="#f3f1eb">
 <link rel="stylesheet" href="../assets/styles.css">
-<meta data-sazvara-hardening="v1" name="robots" content="index,follow,max-image-preview:large">
+<meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://sazvara.ir/contact/">
-<link data-sazvara-bilingual="v1" rel="alternate" hreflang="en" href="https://sazvara.ir/contact/">
+<link rel="alternate" hreflang="en" href="https://sazvara.ir/contact/">
 <link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/contact/">
 <link rel="alternate" hreflang="x-default" href="https://sazvara.ir/contact/">
-<meta property="og:locale:alternate" content="fa_IR">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sazvara">
 <meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fa_IR">
 <meta property="og:title" content="System Diagnostic — Sazvara">
-<meta property="og:description" content="Start a Sazvara system diagnostic by describing the existing system, problem and desired outcome.">
+<meta property="og:description" content="Request a Sazvara system diagnostic by describing the current system, problem, desired outcome and constraints.">
 <meta property="og:url" content="https://sazvara.ir/contact/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="System Diagnostic — Sazvara">
-<meta name="twitter:description" content="Start a Sazvara system diagnostic by describing the existing system, problem and desired outcome.">
+<meta name="twitter:description" content="Request a Sazvara system diagnostic by describing the current system, problem, desired outcome and constraints.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","name":"Sazvara System Diagnostic","url":"https://sazvara.ir/contact/","isPartOf":{"@type":"WebSite","name":"Sazvara","url":"https://sazvara.ir/"}}</script>
 </head><body><header class="site-header"><div class="wrap nav">
 <a class="brand" href="../">SAZVARA</a>
 <nav class="navlinks" aria-label="Primary">
@@ -28,15 +29,32 @@
 </nav></div></header>
 <main><section class="page-hero"><div class="wrap"><p class="eyebrow">System Diagnostic</p>
 <h1>Describe the system, not the solution.</h1>
-<p>The production intake endpoint will be connected during the domain launch. For the foundation release, use the checklist below to prepare a high-signal project brief.</p></div></section>
-<section class="section rule"><div class="wrap">
-<div class="list">
-<div class="list-item"><h3>What exists now?</h3><p>Website, product, workflow, prototype, plugin, spreadsheet, automation or unfinished implementation.</p></div>
-<div class="list-item"><h3>What is going wrong?</h3><p>The failure, bottleneck, manual work, blocked release or business constraint that is creating urgency.</p></div>
-<div class="list-item"><h3>What should be true instead?</h3><p>The observable outcome that would make the work successful.</p></div>
-<div class="list-item"><h3>What cannot be broken?</h3><p>Production data, existing behavior, deadlines, permissions, legal constraints, integrations or operational dependencies.</p></div>
+<p>Give us enough context to understand what exists, what is failing and what outcome matters. A concise, specific brief is more useful than a polished proposal.</p></div></section>
+<section class="section rule"><div class="wrap diagnostic-layout">
+<div>
+<h2 class="form-heading">Request a diagnostic</h2>
+<p class="form-intro">Fields marked * are required. This form does not subscribe you to marketing.</p>
+<div class="form-status" data-form-status role="status" aria-live="polite"></div>
+<form class="diagnostic-form" action="/api/intake.php" method="post" accept-charset="UTF-8" data-diagnostic-form>
+<input type="hidden" name="language" value="en">
+<input type="hidden" name="started_at" value="" data-started-at>
+<div class="hp-field" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+<div class="field"><label for="name">Name *</label><input id="name" name="name" type="text" required minlength="2" maxlength="100" autocomplete="name"></div>
+<div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required maxlength="254" autocomplete="email" inputmode="email"></div>
+<div class="field"><label for="current">What exists now? *</label><textarea id="current" name="current" required minlength="20" maxlength="2000" rows="5" placeholder="Website, product, workflow, prototype, plugin, spreadsheet, automation or unfinished implementation."></textarea></div>
+<div class="field"><label for="problem">What is going wrong? *</label><textarea id="problem" name="problem" required minlength="20" maxlength="3000" rows="6" placeholder="The failure, bottleneck, manual work, blocked release or business constraint creating urgency."></textarea></div>
+<div class="field"><label for="outcome">What should be true instead? *</label><textarea id="outcome" name="outcome" required minlength="10" maxlength="2000" rows="5" placeholder="The observable outcome that would make the work successful."></textarea></div>
+<div class="field"><label for="constraints">What cannot be broken?</label><textarea id="constraints" name="constraints" maxlength="2000" rows="4" placeholder="Production data, current behavior, deadlines, permissions, legal constraints, integrations or dependencies."></textarea></div>
+<label class="consent"><input type="checkbox" name="consent" value="yes" required> <span>I agree that Sazvara may use this information to evaluate and respond to this request. Intake records are kept privately for up to 30 days unless needed for an active engagement. *</span></label>
+<div class="actions"><button class="button" type="submit">Send diagnostic request</button><button class="button-ghost" type="button" data-copy-brief>Copy checklist</button></div>
+</form>
 </div>
-<p class="note">Foundation status: project intake is intentionally not collecting data until the production domain and privacy flow are connected.</p>
+<aside class="intake-note" aria-label="What happens next">
+<p class="eyebrow">What happens next</p>
+<h2>Human review before commitment.</h2>
+<p>Your request enters a private intake queue and notifies the Sazvara operator mailbox. No automatic sales message is sent to you.</p>
+<p>If the problem is a fit, the next step is a scoped conversation or diagnostic—not an automatic commitment to work.</p>
+</aside>
 </div></section></main><footer><div class="wrap footer-row">
 <div><strong>SAZVARA</strong> · Product &amp; Systems Studio</div>
 <div>Founder-led by Sajjad Farajollahi · <span data-year></span></div>

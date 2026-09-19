@@ -1,0 +1,4 @@
+Options -Indexes
+<FilesMatch "\.php$">
+Header always set Cache-Control "no-store"
+</FilesMatch>

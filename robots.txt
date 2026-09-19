@@ -1,3 +1,7 @@
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: *
+Disallow: /api/
 Allow: /
 Sitemap: https://sazvara.ir/sitemap.xml
