@@ -1,15 +1,75 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-<url><loc>https://sazvara.ir/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/"/></url>
-<url><loc>https://sazvara.ir/fa/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/"/></url>
-<url><loc>https://sazvara.ir/services/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/services/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/services/"/></url>
-<url><loc>https://sazvara.ir/fa/services/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/services/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/services/"/></url>
-<url><loc>https://sazvara.ir/work/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/work/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/work/"/></url>
-<url><loc>https://sazvara.ir/fa/work/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/work/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/work/"/></url>
-<url><loc>https://sazvara.ir/ai-builder-os/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/ai-builder-os/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/ai-builder-os/"/></url>
-<url><loc>https://sazvara.ir/fa/ai-builder-os/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/ai-builder-os/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/ai-builder-os/"/></url>
-<url><loc>https://sazvara.ir/sajjad/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/sajjad/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/sajjad/"/></url>
-<url><loc>https://sazvara.ir/fa/sajjad/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/sajjad/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/sajjad/"/></url>
-<url><loc>https://sazvara.ir/contact/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/contact/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/contact/"/></url>
-<url><loc>https://sazvara.ir/fa/contact/</loc><xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/contact/"/><xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/contact/"/></url>
+  <url>
+    <loc>https://sazvara.ir/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/" />
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/" />
+  </url>
+  <url>
+    <loc>https://sazvara.ir/fa/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/" />
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/" />
+  </url>
+  <url>
+    <loc>https://sazvara.ir/services/</loc>
+    <lastmod>2026-08-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/services/" />
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/services/" />
+  </url>
+  <url>
+    <loc>https://sazvara.ir/fa/services/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/services/" />
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/services/" />
+  </url>
+  <url>
+    <loc>https://sazvara.ir/work/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/work/" />
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/work/" />
+  </url>
+  <url>
+    <loc>https://sazvara.ir/fa/work/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/work/" />
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/work/" />
+  </url>
+  <url>
+    <loc>https://sazvara.ir/ai-builder-os/</loc>
+    <lastmod>2026-08-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/ai-builder-os/" />
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/ai-builder-os/" />
+  </url>
+  <url>
+    <loc>https://sazvara.ir/fa/ai-builder-os/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/ai-builder-os/" />
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/ai-builder-os/" />
+  </url>
+  <url>
+    <loc>https://sazvara.ir/sajjad/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/sajjad/" />
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/sajjad/" />
+  </url>
+  <url>
+    <loc>https://sazvara.ir/fa/sajjad/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/sajjad/" />
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/sajjad/" />
+  </url>
+  <url>
+    <loc>https://sazvara.ir/contact/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/contact/" />
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/contact/" />
+  </url>
+  <url>
+    <loc>https://sazvara.ir/fa/contact/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sazvara.ir/contact/" />
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://sazvara.ir/fa/contact/" />
+  </url>
 </urlset>

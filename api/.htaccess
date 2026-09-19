@@ -1,4 +1,5 @@
 Options -Indexes
 <FilesMatch "\.php$">
 Header always set Cache-Control "no-store"
+Header always set X-Robots-Tag "noindex, nofollow, noarchive"
 </FilesMatch>
