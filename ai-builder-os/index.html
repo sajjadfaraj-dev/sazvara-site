@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI Builder OS — Sazvara</title><meta name="description" content="How Sazvara uses AI-native execution while retaining validation and release accountability.">
+<title>AI Builder OS — Sazvara Delivery Method</title><meta name="description" content="How Sazvara uses AI-native execution while retaining validation and release accountability.">
 <meta name="theme-color" content="#f3f1eb">
 <link rel="stylesheet" href="../assets/styles.css">
 <meta data-sazvara-hardening="v1" name="robots" content="index,follow,max-image-preview:large">
@@ -41,7 +41,23 @@
 <div class="list-item"><h3>05 · Evidence</h3><p>Record what changed, what was checked, what remains uncertain and what state can actually be claimed.</p></div>
 <div class="list-item"><h3>06 · Release</h3><p>Use bounded deployment, rollback awareness and explicit handoff instead of ambiguous “done” states.</p></div>
 <div class="list-item"><h3>07 · Measure</h3><p>Observe whether the released system improves the actual outcome it was meant to affect.</p></div>
-</div></div></section></main><footer><div class="wrap footer-row">
+</div></div></section>
+<section class="section"><div class="wrap">
+<p class="eyebrow">Why this method exists</p>
+<h2>Speed is useful only when the state remains knowable.</h2>
+<p>Fast implementation can create a second problem: nobody is certain what changed, which assumptions were made, what was actually tested or whether the deployed state still matches the source. AI Builder OS is designed to keep those questions answerable while using AI heavily during execution.</p>
+<p>The method favors explicit acceptance criteria, narrow change sets, version control, reversible releases and evidence that survives the conversation in which the work was produced.</p>
+</div></section>
+<section class="section"><div class="wrap">
+<h2>What gets recorded</h2>
+<div class="list">
+<div class="list-item"><h3>Decision state</h3><p>Requirements, constraints and important trade-offs that explain why a change exists.</p></div>
+<div class="list-item"><h3>Source state</h3><p>The exact version, files and boundaries involved in the implementation.</p></div>
+<div class="list-item"><h3>Validation state</h3><p>What was tested, what passed, what failed and what remains uncertain.</p></div>
+<div class="list-item"><h3>Release state</h3><p>What reached production, how parity was checked and what rollback path exists.</p></div>
+</div>
+</div></section>
+</main><footer><div class="wrap footer-row">
 <div><strong>SAZVARA</strong> · Product &amp; Systems Studio</div>
 <div>Founder-led by Sajjad Farajollahi · <span data-year></span></div>
 </div></footer><script src="../assets/app.js" defer></script></body></html>
