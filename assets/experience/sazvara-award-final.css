@@ -1,0 +1,2482 @@
+
+/* ===== SOURCE: sazvara-experience.css ===== */
+/* Sazvara Experience Layer v1 — progressive enhancement, no framework */
+:root{
+  --svx-ink:#080a0d; --svx-paper:#f4f2ea; --svx-muted:#a9adb4;
+  --svx-lime:#e8ff8a; --svx-mint:#a6f6db; --svx-violet:#aeb8ff;
+  --svx-line:rgba(244,242,234,.13); --svx-panel:rgba(255,255,255,.045);
+  --svx-radius:28px; --svx-ease:cubic-bezier(.22,1,.36,1);
+}
+html{scroll-behavior:smooth}
+body.svx{
+  background:
+    radial-gradient(70vw 60vw at 87% -8%,rgba(174,184,255,.085),transparent 60%),
+    radial-gradient(58vw 55vw at -5% 42%,rgba(166,246,219,.055),transparent 62%),
+    var(--svx-ink);
+  color:var(--svx-paper);
+  overflow-x:hidden;
+}
+body.svx::before{
+  content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:64px 64px; mask-image:linear-gradient(to bottom,#000,transparent 82%);
+}
+body.svx a{transition:opacity .25s ease,color .25s ease,transform .25s ease}
+body.svx a:hover{opacity:.82}
+.svx-brand{display:inline-flex!important;align-items:center;gap:.72rem;text-decoration:none!important}
+.svx-brand img{width:34px;height:34px;display:block;filter:drop-shadow(0 6px 20px rgba(166,246,219,.12))}
+.svx-brand-word{font:650 12px/1 ui-sans-serif,system-ui,sans-serif;letter-spacing:.2em;color:var(--svx-paper)}
+.svx-hero-shell{position:relative;isolation:isolate;min-height:min(92svh,980px);display:grid;align-items:end;overflow:hidden;border-bottom:1px solid var(--svx-line)}
+.svx-hero-shell>canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-2}
+.svx-hero-shell::after{
+ content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+ background:linear-gradient(180deg,rgba(8,10,13,.05) 0%,rgba(8,10,13,.24) 50%,rgba(8,10,13,.95) 100%);
+}
+.svx-hero-shell h1{
+ max-width:13ch;font-size:clamp(3.3rem,8.3vw,9.2rem)!important;
+ line-height:.88!important;letter-spacing:-.06em!important;text-wrap:balance;
+ position:relative;z-index:2;
+}
+.svx-hero-shell h1 em,.svx-hero-shell h1 strong{font-style:normal;color:var(--svx-lime)}
+.svx-kicker{
+ display:inline-flex;align-items:center;gap:.65rem;margin:0 0 1rem;
+ font:600 11px/1 ui-sans-serif,system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--svx-muted)
+}
+.svx-kicker::before{content:"";width:38px;height:1px;background:linear-gradient(90deg,var(--svx-lime),transparent)}
+.svx-hero-index{
+ position:absolute;right:clamp(1rem,4vw,4.5rem);top:48%;transform:translateY(-50%);z-index:2;
+ display:grid;gap:.65rem;text-align:right;pointer-events:none
+}
+.svx-hero-index b{font:600 11px/1 ui-sans-serif,system-ui,sans-serif;letter-spacing:.14em;color:var(--svx-muted);transition:color .35s ease,transform .35s ease}
+.svx-hero-index b.is-active{color:var(--svx-paper);transform:translateX(-10px)}
+.svx-scroll-meter{position:fixed;top:0;left:0;width:100%;height:2px;z-index:99999;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--svx-lime),var(--svx-mint),var(--svx-violet));pointer-events:none}
+.svx-reveal{opacity:0;transform:translateY(42px);transition:opacity .85s var(--svx-ease),transform .85s var(--svx-ease)}
+.svx-reveal.svx-in{opacity:1;transform:none}
+.svx-project-art{
+ position:relative;display:block;overflow:hidden;border:1px solid var(--svx-line);border-radius:var(--svx-radius);
+ background:#0c0f13;aspect-ratio:1.58/1;margin:1.5rem 0 2.1rem;box-shadow:0 28px 80px rgba(0,0,0,.28)
+}
+.svx-project-art img{width:100%;height:116%;object-fit:cover;display:block;transform:translate3d(0,var(--svx-shift,0px),0) scale(1.03);will-change:transform}
+.svx-project-art::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);pointer-events:none}
+.svx-section-number{
+ display:inline-flex;align-items:center;justify-content:center;width:2.2rem;height:2.2rem;border:1px solid var(--svx-line);border-radius:50%;
+ font:600 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--svx-muted)
+}
+body.svx section,body.svx article{scroll-margin-top:110px}
+body.svx h2{letter-spacing:-.035em;text-wrap:balance}
+body.svx p{max-width:72ch}
+@media(min-width:980px){
+ body.svx main>section{padding-top:clamp(6rem,11vw,10rem);padding-bottom:clamp(6rem,11vw,10rem)}
+ .svx-project-art{margin-left:auto;max-width:min(68vw,980px)}
+}
+@media(max-width:760px){
+ .svx-hero-shell{min-height:78svh}
+ .svx-hero-index{right:1rem;top:25%;gap:.5rem}
+ .svx-hero-shell h1{font-size:clamp(3rem,15vw,5.8rem)!important}
+ body.svx::before{background-size:36px 36px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto!important}
+ .svx-reveal{opacity:1!important;transform:none!important;transition:none!important}
+ .svx-project-art img{transform:none!important}
+ .svx-scroll-meter{display:none}
+}
+
+/* ===== SOURCE: sazvara-polish-v2.css ===== */
+/* SAZVARA AWARD UI v2 — visual polish + mobile repair */
+:root{
+  --sv2-bg:#080a0d;
+  --sv2-paper:#f5f3ec;
+  --sv2-muted:#a7aaa8;
+  --sv2-soft:#c9cbc6;
+  --sv2-lime:#e8ff8a;
+  --sv2-mint:#a6f6db;
+  --sv2-violet:#aeb8ff;
+  --sv2-line:rgba(245,243,236,.13);
+  --sv2-glass:rgba(8,10,13,.78);
+}
+
+/* Header: integrate it with the cinematic surface */
+body.svx header:first-of-type{
+  position:sticky!important;
+  top:0!important;
+  z-index:9990!important;
+  background:var(--sv2-glass)!important;
+  color:var(--sv2-paper)!important;
+  border-bottom:1px solid var(--sv2-line)!important;
+  backdrop-filter:blur(18px) saturate(130%)!important;
+  -webkit-backdrop-filter:blur(18px) saturate(130%)!important;
+}
+body.svx header:first-of-type a,
+body.svx header:first-of-type button{
+  color:var(--sv2-paper)!important;
+}
+body.svx header:first-of-type .svx-brand-word{
+  color:var(--sv2-paper)!important;
+  letter-spacing:.18em!important;
+  font-size:11px!important;
+}
+body.svx .svx-brand img{
+  width:36px!important;
+  height:36px!important;
+  filter:none!important;
+}
+body.svx header:first-of-type a[href*="diagnostic"],
+body.svx header:first-of-type .svx-header-cta{
+  background:var(--sv2-paper)!important;
+  color:#101215!important;
+  border-color:transparent!important;
+  box-shadow:none!important;
+}
+
+/* Hero must never be part of an entrance reveal. This fixes mobile dark/faded capture. */
+body.svx .svx-hero-shell,
+body.svx .svx-hero-shell.svx-reveal,
+body.svx .svx-hero-shell .svx-reveal{
+  opacity:1!important;
+  transform:none!important;
+}
+body.svx .svx-hero-shell{
+  min-height:min(88svh,930px)!important;
+  padding-top:clamp(3.5rem,8vw,8rem)!important;
+}
+body.svx .svx-hero-shell h1{
+  max-width:12.1ch!important;
+  font-size:clamp(3.1rem,7.35vw,8.1rem)!important;
+  line-height:.89!important;
+  letter-spacing:-.058em!important;
+  color:var(--sv2-paper)!important;
+}
+body.svx .svx-kicker{
+  color:#c8cbc8!important;
+  font-size:10px!important;
+  letter-spacing:.18em!important;
+}
+body.svx .svx-kicker::before{
+  background:linear-gradient(90deg,var(--sv2-lime),rgba(232,255,138,0))!important;
+}
+body.svx .svx-hero-shell p{
+  color:#aeb1ae!important;
+  font-size:clamp(1rem,1.55vw,1.35rem)!important;
+  line-height:1.55!important;
+  max-width:52ch!important;
+}
+body.svx .svx-hero-index b{
+  color:#8f9497!important;
+  font-size:10px!important;
+}
+body.svx .svx-hero-index b.is-active{
+  color:var(--sv2-paper)!important;
+}
+
+/* Slightly richer hierarchy across dark sections */
+body.svx main p{
+  color:#9ea29f;
+}
+body.svx main h1,
+body.svx main h2,
+body.svx main h3{
+  color:var(--sv2-paper);
+}
+body.svx .svx-project-art{
+  border-color:rgba(245,243,236,.16)!important;
+  box-shadow:0 36px 110px rgba(0,0,0,.34)!important;
+}
+
+/* Premium mobile header */
+.svx-menu-toggle,
+.svx-mobile-menu{
+  display:none;
+}
+@media(max-width:760px){
+  body.svx header:first-of-type{
+    min-height:64px!important;
+  }
+
+  body.svx header:first-of-type > *{
+    min-width:0;
+  }
+
+  body.svx header:first-of-type nav,
+  body.svx header:first-of-type .svx-header-cta{
+    display:none!important;
+  }
+
+  body.svx header:first-of-type .svx-brand{
+    position:relative;
+    z-index:10002;
+  }
+
+  .svx-menu-toggle{
+    display:inline-flex!important;
+    align-items:center;
+    justify-content:center;
+    position:absolute;
+    right:18px;
+    top:14px;
+    z-index:10002;
+    min-width:76px;
+    height:38px;
+    padding:0 14px;
+    border:1px solid rgba(245,243,236,.16)!important;
+    border-radius:999px;
+    background:rgba(255,255,255,.05)!important;
+    font:650 11px/1 ui-sans-serif,system-ui,sans-serif;
+    letter-spacing:.11em;
+    text-transform:uppercase;
+    cursor:pointer;
+  }
+
+  .svx-mobile-menu{
+    display:flex;
+    position:fixed;
+    inset:0;
+    z-index:10001;
+    padding:102px 22px 28px;
+    flex-direction:column;
+    justify-content:space-between;
+    background:rgba(8,10,13,.985);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-12px);
+    transition:opacity .28s ease,visibility .28s ease,transform .28s ease;
+  }
+
+  .svx-mobile-menu.is-open{
+    opacity:1;
+    visibility:visible;
+    transform:none;
+  }
+
+  .svx-mobile-menu-links{
+    display:grid;
+    gap:0;
+    border-top:1px solid var(--sv2-line);
+  }
+
+  .svx-mobile-menu a{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:66px;
+    padding:0 2px;
+    border-bottom:1px solid var(--sv2-line);
+    color:var(--sv2-paper)!important;
+    text-decoration:none;
+    font:500 clamp(1.35rem,7vw,2rem)/1 ui-sans-serif,system-ui,sans-serif;
+    letter-spacing:-.03em;
+  }
+
+  .svx-mobile-menu a::after{
+    content:"↗";
+    font-size:.9rem;
+    opacity:.5;
+  }
+
+  .svx-mobile-menu .svx-mobile-primary{
+    margin-top:24px;
+    justify-content:center;
+    min-height:56px;
+    border:0;
+    border-radius:999px;
+    background:var(--sv2-paper);
+    color:#111315!important;
+    font-size:1rem;
+    font-weight:700;
+  }
+
+  .svx-mobile-menu .svx-mobile-primary::after{
+    display:none;
+  }
+
+  body.svx.svx-menu-open{
+    overflow:hidden!important;
+  }
+
+  body.svx .svx-hero-shell{
+    min-height:auto!important;
+    padding-top:5.1rem!important;
+    padding-bottom:4.4rem!important;
+  }
+
+  body.svx .svx-hero-shell h1{
+    max-width:9.7ch!important;
+    font-size:clamp(3.05rem,14vw,4.15rem)!important;
+    line-height:.91!important;
+    letter-spacing:-.062em!important;
+    margin-top:.55rem!important;
+  }
+
+  body.svx .svx-kicker{
+    max-width:31ch;
+    line-height:1.5!important;
+    margin-bottom:.8rem!important;
+  }
+
+  body.svx .svx-hero-shell p{
+    margin-top:1.65rem!important;
+    font-size:1rem!important;
+    line-height:1.55!important;
+    color:#a9ada9!important;
+  }
+
+  body.svx .svx-hero-index{
+    position:static!important;
+    transform:none!important;
+    display:flex!important;
+    flex-wrap:wrap;
+    gap:.45rem!important;
+    margin:1.55rem 0 0!important;
+    text-align:left!important;
+    pointer-events:none;
+  }
+
+  body.svx .svx-hero-index b{
+    display:inline-flex;
+    min-height:30px;
+    align-items:center;
+    padding:0 .72rem;
+    border:1px solid var(--sv2-line);
+    border-radius:999px;
+    background:rgba(255,255,255,.025);
+    font-size:9px!important;
+    letter-spacing:.12em!important;
+  }
+
+  body.svx .svx-hero-index b.is-active{
+    background:rgba(232,255,138,.08);
+    border-color:rgba(232,255,138,.28);
+    color:var(--sv2-lime)!important;
+    transform:none!important;
+  }
+
+  body.svx .svx-project-art{
+    border-radius:20px!important;
+    margin-top:1.15rem!important;
+  }
+
+  body.svx main > section{
+    padding-left:18px!important;
+    padding-right:18px!important;
+  }
+
+  body.svx main > section:not(.svx-hero-shell){
+    padding-top:4.8rem!important;
+    padding-bottom:4.8rem!important;
+  }
+
+  body.svx main > section:not(.svx-hero-shell) h1,
+  body.svx main > section:not(.svx-hero-shell) h2{
+    font-size:clamp(2.45rem,11.5vw,3.5rem)!important;
+    line-height:.98!important;
+    letter-spacing:-.05em!important;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .svx-mobile-menu{transition:none!important}
+}
+
+/* ===== SOURCE: sazvara-story-v3.css ===== */
+/* SAZVARA AWARD UI V3 — scroll storytelling */
+:root{
+  --v3-bg:#080a0d;
+  --v3-paper:#f5f3ec;
+  --v3-dim:#a7aaa8;
+  --v3-line:rgba(245,243,236,.13);
+  --v3-lime:#e8ff8a;
+  --v3-mint:#a6f6db;
+  --v3-violet:#aeb8ff;
+}
+
+body.svx .svx-brand img{
+  width:31px!important;
+  height:31px!important;
+  border-radius:0!important;
+  filter:none!important;
+}
+body.svx .svx-brand-word{
+  font-size:11px!important;
+  font-weight:680!important;
+  letter-spacing:.22em!important;
+}
+
+/* ---------- Homepage process story ---------- */
+.svx-process-story{
+  position:relative;
+  padding:0!important;
+  border-top:1px solid var(--v3-line);
+  border-bottom:1px solid var(--v3-line);
+  background:
+    radial-gradient(55vw 45vw at 75% 44%,rgba(174,184,255,.045),transparent 65%),
+    var(--v3-bg);
+}
+.svx-story-inner{
+  width:min(1180px,calc(100% - 48px));
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(440px,1.1fr);
+  gap:clamp(3rem,8vw,8rem);
+  position:relative;
+}
+.svx-story-copy{
+  position:relative;
+  z-index:2;
+}
+.svx-story-step{
+  min-height:78vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  border-bottom:1px solid rgba(245,243,236,.075);
+}
+.svx-story-step:last-child{border-bottom:0}
+.svx-story-eyebrow{
+  display:flex;
+  align-items:center;
+  gap:.8rem;
+  margin-bottom:1.15rem;
+  font:650 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.17em;
+  color:#929793;
+}
+.svx-story-eyebrow span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:28px;
+  height:28px;
+  border:1px solid var(--v3-line);
+  border-radius:50%;
+  color:var(--v3-paper);
+}
+.svx-story-step h2{
+  margin:0;
+  max-width:9.5ch;
+  font-size:clamp(3.2rem,5.6vw,6.8rem)!important;
+  line-height:.91!important;
+  letter-spacing:-.058em!important;
+  color:var(--v3-paper)!important;
+}
+.svx-story-step p{
+  max-width:38ch!important;
+  margin:1.5rem 0 0!important;
+  font-size:clamp(1rem,1.25vw,1.2rem)!important;
+  line-height:1.6!important;
+  color:#aeb2ae!important;
+}
+.svx-story-step.is-active .svx-story-eyebrow{
+  color:var(--v3-lime);
+}
+.svx-story-visual-wrap{
+  position:relative;
+}
+.svx-story-visual{
+  position:sticky;
+  top:17vh;
+  height:66vh;
+  min-height:520px;
+  margin:17vh 0;
+  overflow:hidden;
+  border:1px solid var(--v3-line);
+  border-radius:30px;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005)),
+    #0a0c0f;
+  box-shadow:0 42px 120px rgba(0,0,0,.28);
+}
+.svx-story-visual canvas{
+  width:100%;
+  height:100%;
+  display:block;
+}
+.svx-story-status{
+  position:absolute;
+  left:28px;
+  right:28px;
+  bottom:25px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  pointer-events:none;
+}
+.svx-story-status strong{
+  display:block;
+  font:680 12px/1 ui-sans-serif,system-ui,sans-serif;
+  letter-spacing:.16em;
+  color:var(--v3-paper);
+}
+.svx-story-status small{
+  display:block;
+  margin-top:.5rem;
+  font:500 9px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.13em;
+  color:#7f8587;
+}
+.svx-story-counter{
+  font:500 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.12em;
+  color:#8e9496;
+}
+
+/* ---------- Work: large scroll-reactive stage ---------- */
+body.svx-work-story .svx-work-stage{
+  position:fixed;
+  top:19vh;
+  right:clamp(28px,7vw,108px);
+  width:min(47vw,730px);
+  height:min(61vh,650px);
+  z-index:30;
+  pointer-events:none;
+  opacity:0;
+  transform:translate3d(30px,16px,0) scale(.985);
+  transition:
+    opacity .48s cubic-bezier(.22,1,.36,1),
+    transform .62s cubic-bezier(.22,1,.36,1);
+}
+body.svx-work-story .svx-work-stage.is-visible{
+  opacity:1;
+  transform:none;
+}
+.svx-work-stage-frame{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  border:1px solid rgba(245,243,236,.15);
+  border-radius:30px;
+  background:#0a0c0f;
+  box-shadow:0 50px 140px rgba(0,0,0,.42);
+}
+.svx-work-stage-frame::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.025);
+  border-radius:inherit;
+  pointer-events:none;
+}
+.svx-work-stage img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transform:scale(1.035);
+  transition:
+    opacity .28s ease,
+    transform .8s cubic-bezier(.22,1,.36,1);
+}
+.svx-work-stage.is-changing img{
+  opacity:.18;
+  transform:scale(1.065);
+}
+.svx-work-stage-meta{
+  position:absolute;
+  z-index:2;
+  left:28px;
+  right:28px;
+  bottom:25px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  text-shadow:0 2px 24px #000;
+}
+.svx-work-stage-title{
+  font:680 clamp(1.1rem,2vw,1.55rem)/1 ui-sans-serif,system-ui,sans-serif;
+  color:var(--v3-paper);
+  letter-spacing:-.025em;
+}
+.svx-work-stage-index{
+  font:500 9px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  color:#c7cbc7;
+  letter-spacing:.15em;
+}
+.svx-work-rail{
+  position:absolute;
+  top:0;
+  left:-22px;
+  height:100%;
+  width:2px;
+  background:rgba(245,243,236,.07);
+}
+.svx-work-rail > i{
+  display:block;
+  width:100%;
+  height:25%;
+  background:linear-gradient(var(--v3-lime),var(--v3-mint));
+  transform:translateY(var(--v3-rail,0%));
+  transition:transform .5s cubic-bezier(.22,1,.36,1);
+}
+body.svx-work-story .svx-project-art{
+  transition:opacity .25s ease;
+}
+
+/* Keep the left case copy readable while the cinematic stage occupies the right. */
+@media(min-width:901px){
+  body.svx-work-story .svx-project-art{
+    opacity:0!important;
+    pointer-events:none!important;
+  }
+  body.svx-work-story main{
+    position:relative;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media(max-width:900px){
+  body.svx .svx-brand img{
+    width:30px!important;
+    height:30px!important;
+  }
+  .svx-story-inner{
+    width:100%;
+    display:block;
+  }
+  .svx-story-visual-wrap{
+    position:sticky;
+    top:64px;
+    z-index:4;
+    height:0;
+    pointer-events:none;
+  }
+  .svx-story-visual{
+    position:absolute;
+    top:14px;
+    left:18px;
+    right:18px;
+    height:230px;
+    min-height:0;
+    margin:0;
+    border-radius:20px;
+    opacity:.98;
+    box-shadow:0 24px 70px rgba(0,0,0,.42);
+  }
+  .svx-story-copy{
+    padding-top:270px;
+  }
+  .svx-story-step{
+    min-height:62vh;
+    padding:4.6rem 36px 4rem;
+  }
+  .svx-story-step h2{
+    max-width:8.5ch;
+    font-size:clamp(3rem,14.5vw,4.25rem)!important;
+  }
+  .svx-story-step p{
+    max-width:30ch!important;
+    font-size:1rem!important;
+  }
+  .svx-story-status{
+    left:18px;
+    right:18px;
+    bottom:16px;
+  }
+  .svx-story-status strong{
+    font-size:10px;
+  }
+  .svx-story-status small{
+    display:none;
+  }
+  body.svx-work-story .svx-work-stage{
+    display:none!important;
+  }
+  body.svx-work-story .svx-project-art{
+    opacity:1!important;
+    width:100%!important;
+    max-width:none!important;
+    aspect-ratio:1.42/1!important;
+    margin:1.8rem 0 2.4rem!important;
+  }
+}
+
+@media(max-width:520px){
+  .svx-story-step{
+    padding-left:24px;
+    padding-right:24px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .svx-work-stage,
+  .svx-work-stage img{
+    transition:none!important;
+  }
+  .svx-story-visual canvas{
+    opacity:.9;
+  }
+}
+
+/* ===== SOURCE: sazvara-refinement-v4.css ===== */
+/* SAZVARA AWARD UI V4 — post-launch refinement
+   Purpose: hierarchy, contrast, spacing, work-stage timing, cross-page consistency.
+*/
+:root{
+  --sv4-bg:#080a0d;
+  --sv4-panel:#0d1013;
+  --sv4-paper:#f5f3ec;
+  --sv4-soft:#c7cac6;
+  --sv4-muted:#9ca19e;
+  --sv4-line:rgba(245,243,236,.13);
+  --sv4-line-strong:rgba(245,243,236,.22);
+  --sv4-lime:#e8ff8a;
+  --sv4-mint:#a6f6db;
+  --sv4-violet:#aeb8ff;
+  --sv4-ease:cubic-bezier(.22,1,.36,1);
+}
+
+/* Structural sections should never disappear as a unit.
+   Inner elements may still use the existing progressive reveals. */
+body.svx.sv4-refined main > section.svx-reveal{
+  opacity:1!important;
+  transform:none!important;
+}
+
+/* ---------------- Header / navigation consistency ---------------- */
+body.svx.sv4-refined header:first-of-type{
+  min-height:72px!important;
+}
+
+body.svx.sv4-refined header:first-of-type .svx-brand{
+  flex:0 0 auto;
+}
+
+body.svx.sv4-refined header:first-of-type .svx-brand img{
+  width:31px!important;
+  height:31px!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+
+/* Insights uses a different original header DOM. V4 normalizes it. */
+body.svx-page-insights header.insight-shell{
+  width:min(1180px,calc(100% - 48px))!important;
+  max-width:none!important;
+  min-height:72px!important;
+  margin:0 auto!important;
+  padding:0!important;
+  display:flex!important;
+  align-items:center!important;
+  gap:clamp(1.5rem,4vw,4.5rem)!important;
+}
+
+body.svx-page-insights header.insight-shell > nav.insight-nav{
+  flex:1 1 auto!important;
+  width:auto!important;
+  max-width:none!important;
+  display:flex!important;
+  justify-content:flex-end!important;
+  align-items:center!important;
+  padding:0!important;
+  margin:0!important;
+}
+
+body.svx-page-insights .insight-links{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  gap:clamp(.85rem,1.6vw,1.45rem)!important;
+}
+
+body.svx-page-insights .insight-links > a{
+  color:var(--sv4-paper)!important;
+  text-decoration:none!important;
+  white-space:nowrap;
+}
+
+body.svx-page-insights .insight-links > a.sv4-lang-link{
+  width:42px;
+  height:42px;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  padding:0!important;
+  border:1px solid rgba(245,243,236,.55)!important;
+  border-radius:50%!important;
+  font-weight:700!important;
+  letter-spacing:.06em!important;
+}
+
+body.svx-page-insights .svx-header-cta{
+  min-height:44px!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  padding:0 1.25rem!important;
+  border-radius:999px!important;
+  background:var(--sv4-paper)!important;
+  color:#111315!important;
+  font-weight:700!important;
+}
+
+/* ---------------- Global editorial rhythm ---------------- */
+body.svx.sv4-refined main h1,
+body.svx.sv4-refined main h2{
+  text-wrap:balance;
+}
+
+body.svx.sv4-refined main p{
+  text-wrap:pretty;
+}
+
+@media(min-width:901px){
+  body.svx-page-services main > section,
+  body.svx-page-founder main > section{
+    padding-top:clamp(5.25rem,7vw,7.5rem)!important;
+    padding-bottom:clamp(5.25rem,7vw,7.5rem)!important;
+  }
+
+  body.svx-page-agencies main > section{
+    padding-top:clamp(5rem,6.5vw,7rem)!important;
+    padding-bottom:clamp(5rem,6.5vw,7rem)!important;
+  }
+
+  body.svx-page-agencies main > section:first-child{
+    min-height:auto!important;
+    padding-top:clamp(4.25rem,5.5vw,5.8rem)!important;
+    padding-bottom:clamp(4.25rem,5.5vw,5.8rem)!important;
+  }
+
+  body.svx-page-work main > section:first-child{
+    min-height:auto!important;
+    padding-top:clamp(7rem,9vw,9.2rem)!important;
+    padding-bottom:clamp(5.5rem,7vw,7rem)!important;
+  }
+
+  body.svx-page-founder main > section:first-child,
+  body.svx-page-services main > section:first-child{
+    min-height:auto!important;
+  }
+}
+
+/* ---------------- Homepage: tighter process story ---------------- */
+@media(min-width:901px){
+  body.svx-page-home .svx-story-step{
+    min-height:62vh!important;
+  }
+
+  body.svx-page-home .svx-story-visual{
+    top:19vh!important;
+    height:58vh!important;
+    min-height:460px!important;
+    margin:14vh 0!important;
+  }
+
+  body.svx-page-home .svx-story-step h2{
+    font-size:clamp(3rem,5vw,5.8rem)!important;
+  }
+}
+
+/* ---------------- Work: stage begins with the cases, never over the intro ---------------- */
+@media(min-width:901px){
+  body.svx-page-work .svx-work-stage{
+    top:20vh!important;
+    right:clamp(28px,6vw,92px)!important;
+    width:min(43vw,650px)!important;
+    height:min(57vh,610px)!important;
+  }
+
+  /* V3 may set is-visible early. V4 requires its own readiness gate too. */
+  body.svx-page-work .svx-work-stage.is-visible{
+    opacity:0!important;
+    transform:translate3d(28px,16px,0) scale(.985)!important;
+  }
+
+  body.svx-page-work .svx-work-stage.is-visible.sv4-stage-ready{
+    opacity:1!important;
+    transform:none!important;
+  }
+
+  body.svx-page-work .svx-work-stage-frame{
+    border-radius:26px!important;
+  }
+
+  body.svx-page-work .svx-work-stage-meta{
+    left:24px!important;
+    right:24px!important;
+    bottom:22px!important;
+  }
+}
+
+/* ---------------- Insights: fix contrast and eliminate dead space ---------------- */
+body.svx-page-insights main.insight-shell{
+  width:min(1180px,calc(100% - 48px))!important;
+  max-width:none!important;
+  margin:0 auto!important;
+  padding-left:0!important;
+  padding-right:0!important;
+}
+
+body.svx-page-insights .hub-hero{
+  min-height:auto!important;
+  padding-top:clamp(6.5rem,9vw,9rem)!important;
+  padding-bottom:clamp(4rem,5.5vw,5.5rem)!important;
+}
+
+body.svx-page-insights .hub-hero h1{
+  max-width:11ch!important;
+  margin-bottom:1rem!important;
+}
+
+body.svx-page-insights .hub-hero .hub-intro{
+  max-width:56ch!important;
+  color:#a8aca8!important;
+  font-size:clamp(1rem,1.3vw,1.18rem)!important;
+  line-height:1.6!important;
+}
+
+body.svx-page-insights .hub-grid{
+  padding-top:0!important;
+  padding-bottom:clamp(6rem,8vw,8rem)!important;
+  gap:18px!important;
+}
+
+body.svx-page-insights .hub-card{
+  position:relative;
+  overflow:hidden;
+  min-height:235px;
+  padding:28px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:flex-start!important;
+  background:
+    radial-gradient(140% 110% at 100% 0%,rgba(174,184,255,.055),transparent 48%),
+    linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.008)),
+    var(--sv4-panel)!important;
+  border:1px solid var(--sv4-line)!important;
+  border-radius:22px!important;
+  color:var(--sv4-paper)!important;
+  box-shadow:none!important;
+  transition:
+    transform .45s var(--sv4-ease),
+    border-color .35s ease,
+    background .35s ease!important;
+}
+
+body.svx-page-insights .hub-card::after{
+  content:"";
+  position:absolute;
+  left:28px;
+  right:28px;
+  bottom:0;
+  height:1px;
+  background:linear-gradient(90deg,var(--sv4-lime),var(--sv4-mint),transparent);
+  opacity:0;
+  transform:scaleX(.45);
+  transform-origin:left;
+  transition:opacity .35s ease,transform .5s var(--sv4-ease);
+}
+
+body.svx-page-insights .hub-card:hover{
+  opacity:1!important;
+  transform:translateY(-5px)!important;
+  border-color:rgba(166,246,219,.24)!important;
+  background:
+    radial-gradient(140% 110% at 100% 0%,rgba(174,184,255,.08),transparent 48%),
+    linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01)),
+    #0e1115!important;
+}
+
+body.svx-page-insights .hub-card:hover::after{
+  opacity:.85;
+  transform:scaleX(1);
+}
+
+body.svx-page-insights .hub-score{
+  color:#cfd2cc!important;
+  opacity:.72!important;
+  font-size:.72rem!important;
+  letter-spacing:.11em!important;
+}
+
+body.svx-page-insights .hub-card h2{
+  margin:.8rem 0 .85rem!important;
+  color:var(--sv4-paper)!important;
+  font-size:clamp(1.18rem,1.55vw,1.48rem)!important;
+  line-height:1.08!important;
+  letter-spacing:-.035em!important;
+}
+
+body.svx-page-insights .hub-card p{
+  margin:0!important;
+  color:#9ea39f!important;
+  font-size:.96rem!important;
+  line-height:1.58!important;
+}
+
+/* ---------------- Mobile ---------------- */
+@media(max-width:900px){
+  body.svx.sv4-refined header:first-of-type{
+    min-height:64px!important;
+  }
+
+  body.svx-page-insights header.insight-shell{
+    width:100%!important;
+    min-height:64px!important;
+    padding:0 18px!important;
+    justify-content:space-between!important;
+  }
+
+  body.svx-page-insights header.insight-shell > nav.insight-nav{
+    display:none!important;
+  }
+
+  body.svx-page-insights header.insight-shell .svx-brand{
+    display:inline-flex!important;
+    position:relative!important;
+    z-index:10002!important;
+  }
+
+  body.svx-page-insights .svx-menu-toggle{
+    top:13px!important;
+  }
+
+  body.svx-page-work main > section:first-child,
+  body.svx-page-services main > section:first-child,
+  body.svx-page-founder main > section:first-child,
+  body.svx-page-agencies main > section:first-child,
+  body.svx-page-insights .hub-hero{
+    min-height:auto!important;
+  }
+
+  body.svx-page-work main > section:first-child,
+  body.svx-page-services main > section:first-child,
+  body.svx-page-founder main > section:first-child{
+    padding-top:4.7rem!important;
+    padding-bottom:4.4rem!important;
+  }
+
+  body.svx-page-agencies main > section{
+    padding-top:4rem!important;
+    padding-bottom:4rem!important;
+  }
+
+  body.svx-page-insights main.insight-shell{
+    width:100%!important;
+    padding:0 0 4rem!important;
+  }
+
+  body.svx-page-insights .hub-hero{
+    padding:4.7rem 36px 3.8rem!important;
+  }
+
+  body.svx-page-insights .hub-hero h1{
+    max-width:8.5ch!important;
+    font-size:clamp(2.8rem,13vw,3.7rem)!important;
+    line-height:.94!important;
+    letter-spacing:-.055em!important;
+  }
+
+  body.svx-page-insights .hub-hero .hub-intro{
+    max-width:29ch!important;
+    font-size:1rem!important;
+    line-height:1.6!important;
+  }
+
+  body.svx-page-insights .hub-grid{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:14px!important;
+    padding:0 18px 4.5rem!important;
+  }
+
+  body.svx-page-insights .hub-card{
+    min-height:0!important;
+    padding:22px!important;
+    border-radius:18px!important;
+  }
+
+  body.svx-page-insights .hub-card::after{
+    left:22px;
+    right:22px;
+  }
+
+  body.svx-page-insights .hub-card h2{
+    font-size:1.28rem!important;
+  }
+
+  body.svx-page-home .svx-story-copy{
+    padding-top:248px!important;
+  }
+
+  body.svx-page-home .svx-story-step{
+    min-height:50vh!important;
+    padding-top:3.8rem!important;
+    padding-bottom:3.8rem!important;
+  }
+
+  body.svx-page-home .svx-story-visual{
+    height:214px!important;
+  }
+}
+
+@media(max-width:520px){
+  body.svx-page-insights .hub-hero{
+    padding-left:24px!important;
+    padding-right:24px!important;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  body.svx-page-insights .hub-card{
+    transition:none!important;
+  }
+}
+
+/* ===== SOURCE: sazvara-polish-v4-1.css ===== */
+/* SAZVARA AWARD UI V4.1 — spacing + header polish */
+
+/* Insights header: remove the old inner rule and prevent mobile overflow. */
+body.svx-page-insights header.insight-shell,
+body.svx-page-insights header.insight-shell > nav.insight-nav{
+  box-sizing:border-box!important;
+}
+
+body.svx-page-insights header.insight-shell > nav.insight-nav{
+  border-bottom:0!important;
+  box-shadow:none!important;
+}
+
+/* Desktop work: make proof arrive sooner without breaking the scroll stage. */
+@media(min-width:901px){
+  body.svx-page-work main > section{
+    min-height:auto!important;
+  }
+
+  body.svx-page-work main > section:not(:first-child){
+    padding-top:clamp(3.5rem,5vw,5rem)!important;
+    padding-bottom:clamp(4.5rem,6vw,6.5rem)!important;
+  }
+
+  body.svx-page-work main > section:first-child{
+    padding-bottom:clamp(4.25rem,5.5vw,5.8rem)!important;
+  }
+}
+
+/* Mobile: stop each content section behaving like a full viewport panel.
+   This is what produced the large empty blocks in Work and Services. */
+@media(max-width:900px){
+  body.svx-page-work main > section,
+  body.svx-page-services main > section,
+  body.svx-page-founder main > section,
+  body.svx-page-agencies main > section{
+    min-height:auto!important;
+  }
+
+  body.svx-page-work main > section:not(:first-child),
+  body.svx-page-services main > section:not(:first-child),
+  body.svx-page-founder main > section:not(:first-child),
+  body.svx-page-agencies main > section:not(:first-child){
+    padding-top:3.25rem!important;
+    padding-bottom:3.5rem!important;
+  }
+
+  body.svx-page-work main > section:first-child,
+  body.svx-page-services main > section:first-child{
+    padding-bottom:3.6rem!important;
+  }
+
+  /* Insights header was 100% wide plus padding in the original layout,
+     which pushed the fixed Menu control partly outside the viewport. */
+  body.svx-page-insights header.insight-shell{
+    width:100%!important;
+    max-width:100%!important;
+    padding-left:18px!important;
+    padding-right:18px!important;
+    overflow:visible!important;
+  }
+
+  body.svx-page-insights .svx-menu-toggle{
+    position:fixed!important;
+    top:13px!important;
+    right:18px!important;
+    left:auto!important;
+    max-width:calc(100vw - 36px)!important;
+    box-sizing:border-box!important;
+  }
+
+  /* Slightly reduce the gap between Insights introduction and first card. */
+  body.svx-page-insights .hub-hero{
+    padding-bottom:3.1rem!important;
+  }
+
+  body.svx-page-insights .hub-grid{
+    padding-top:0!important;
+  }
+}
+
+@media(max-width:420px){
+  body.svx-page-work main > section:not(:first-child),
+  body.svx-page-services main > section:not(:first-child){
+    padding-top:2.8rem!important;
+    padding-bottom:3rem!important;
+  }
+}
+
+/* ===== SOURCE: sazvara-polish-v4-2.css ===== */
+/* SAZVARA AWARD UI — V4.2 HOME / LOGO / SPACING POLISH */
+
+/* ---------------- Logo ---------------- */
+body.svx header:first-of-type .svx-brand{
+  gap:12px !important;
+  align-items:center !important;
+}
+
+body.svx header:first-of-type .svx-brand img{
+  width:34px !important;
+  height:34px !important;
+  border-radius:12px !important;
+  filter: drop-shadow(0 0 10px rgba(166,246,219,.14));
+  transition:
+    transform .35s ease,
+    filter .35s ease,
+    opacity .35s ease !important;
+}
+
+body.svx header:first-of-type .svx-brand:hover img{
+  transform: translateY(-1px) scale(1.03);
+  filter:
+    drop-shadow(0 0 14px rgba(166,246,219,.20))
+    drop-shadow(0 0 24px rgba(174,184,255,.10));
+}
+
+body.svx header:first-of-type .svx-brand span,
+body.svx header:first-of-type .svx-brand strong,
+body.svx header:first-of-type .svx-brand .svx-wordmark{
+  letter-spacing:.16em !important;
+  font-weight:700 !important;
+}
+
+/* ---------------- Global button / nav hover polish ---------------- */
+body.svx a,
+body.svx button{
+  transition:
+    color .28s ease,
+    background-color .28s ease,
+    border-color .28s ease,
+    box-shadow .32s ease,
+    transform .32s ease,
+    opacity .28s ease !important;
+}
+
+body.svx header:first-of-type nav a{
+  position:relative;
+}
+
+body.svx header:first-of-type nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-8px;
+  height:1px;
+  background:linear-gradient(90deg, rgba(232,255,138,.0), rgba(232,255,138,.85), rgba(166,246,219,.0));
+  opacity:0;
+  transform:scaleX(.45);
+  transition:opacity .28s ease, transform .35s ease;
+}
+
+body.svx header:first-of-type nav a:hover::after,
+body.svx header:first-of-type nav a:focus-visible::after{
+  opacity:1;
+  transform:scaleX(1);
+}
+
+/* ---------------- Homepage hover improvements ---------------- */
+body.svx-page-home a[href*="diagnostic"],
+body.svx-page-home a[href="/agencies/"],
+body.svx-page-home a[href="/services/"],
+body.svx-page-home a[href="/work/"],
+body.svx-page-home a[href="/ai-builder-os/"]{
+  transform:translateY(0);
+}
+
+body.svx-page-home a[href*="diagnostic"]:hover,
+body.svx-page-home a[href="/agencies/"]:hover,
+body.svx-page-home a[href="/services/"]:hover,
+body.svx-page-home a[href="/work/"]:hover,
+body.svx-page-home a[href="/ai-builder-os/"]:hover,
+body.svx-page-home a[href*="diagnostic"]:focus-visible,
+body.svx-page-home a[href="/agencies/"]:focus-visible,
+body.svx-page-home a[href="/services/"]:focus-visible,
+body.svx-page-home a[href="/work/"]:focus-visible,
+body.svx-page-home a[href="/ai-builder-os/"]:focus-visible{
+  transform:translateY(-2px);
+  box-shadow:0 14px 30px rgba(0,0,0,.26);
+}
+
+body.svx-page-home main [class*="card"],
+body.svx-page-home main [class*="tile"],
+body.svx-page-home main article,
+body.svx-page-home main li{
+  transition:
+    transform .38s cubic-bezier(.22,1,.36,1),
+    border-color .32s ease,
+    background-color .32s ease,
+    box-shadow .32s ease !important;
+}
+
+/* apply only to likely clickable grouped items */
+body.svx-page-home main a:hover > [class*="card"],
+body.svx-page-home main a:hover > [class*="tile"],
+body.svx-page-home main article:hover,
+body.svx-page-home main li:hover{
+  transform:translateY(-4px);
+  border-color:rgba(166,246,219,.24) !important;
+  box-shadow:0 18px 34px rgba(0,0,0,.22);
+}
+
+/* ---------------- Work spacing ---------------- */
+@media(min-width:901px){
+  body.svx-page-work main > section:first-child{
+    padding-bottom:3.5rem !important;
+  }
+
+  body.svx-page-work main > section:nth-child(2){
+    padding-top:2.2rem !important;
+  }
+
+  body.svx-page-work h2,
+  body.svx-page-work h3{
+    margin-bottom:.65rem !important;
+  }
+
+  body.svx-page-work main > section:nth-child(2) p,
+  body.svx-page-work main > section:nth-child(3) p{
+    max-width:31ch !important;
+  }
+}
+
+@media(max-width:900px){
+  body.svx-page-work main > section:first-child{
+    padding-bottom:2.4rem !important;
+  }
+
+  body.svx-page-work main > section:nth-child(2){
+    padding-top:1.8rem !important;
+    padding-bottom:2.4rem !important;
+  }
+
+  body.svx-page-work main > section:nth-child(2) h2,
+  body.svx-page-work main > section:nth-child(2) h3{
+    margin-bottom:.5rem !important;
+  }
+
+  body.svx-page-work main > section:nth-child(2) p{
+    margin-top:.6rem !important;
+  }
+}
+
+/* ---------------- Services spacing ---------------- */
+@media(max-width:900px){
+  body.svx-page-services main > section:first-child{
+    padding-bottom:2.5rem !important;
+  }
+
+  body.svx-page-services main > section:nth-child(2){
+    padding-top:2rem !important;
+  }
+}
+
+/* ===== SOURCE: sazvara-polish-v4-3.css ===== */
+/* SAZVARA AWARD UI V4.3 — final local polish */
+
+/* ---------- Logo presence ---------- */
+body.svx.sv43-polish header:first-of-type .svx-brand{
+  gap:13px!important;
+}
+
+body.svx.sv43-polish header:first-of-type .svx-brand img{
+  width:38px!important;
+  height:38px!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  filter:
+    drop-shadow(0 0 9px rgba(166,246,219,.14))
+    drop-shadow(0 0 16px rgba(174,184,255,.06))!important;
+  transform-origin:center;
+  transition:
+    transform .42s cubic-bezier(.22,1,.36,1),
+    filter .35s ease!important;
+}
+
+body.svx.sv43-polish header:first-of-type .svx-brand:hover img,
+body.svx.sv43-polish header:first-of-type .svx-brand:focus-visible img{
+  transform:translateY(-1px) scale(1.055);
+  filter:
+    drop-shadow(0 0 12px rgba(232,255,138,.22))
+    drop-shadow(0 0 22px rgba(166,246,219,.12))!important;
+}
+
+body.svx.sv43-polish header:first-of-type .svx-brand-word,
+body.svx.sv43-polish header:first-of-type .svx-brand span{
+  letter-spacing:.18em!important;
+  font-weight:720!important;
+}
+
+/* ---------- Homepage hover system ---------- */
+body.svx-page-home .sv43-hover-card{
+  --mx:50%;
+  --my:50%;
+  position:relative!important;
+  isolation:isolate;
+  overflow:hidden;
+  transform:translateZ(0);
+  border-color:rgba(245,243,236,.11)!important;
+  transition:
+    transform .5s cubic-bezier(.22,1,.36,1),
+    border-color .35s ease,
+    background-color .35s ease,
+    box-shadow .45s ease!important;
+}
+
+body.svx-page-home .sv43-hover-card::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:-1px;
+  opacity:0;
+  pointer-events:none;
+  background:
+    radial-gradient(
+      340px circle at var(--mx) var(--my),
+      rgba(166,246,219,.11),
+      rgba(174,184,255,.055) 32%,
+      transparent 67%
+    );
+  transition:opacity .38s ease;
+}
+
+body.svx-page-home .sv43-hover-card::after{
+  content:"";
+  position:absolute;
+  left:22px;
+  right:22px;
+  bottom:0;
+  height:1px;
+  opacity:0;
+  transform:scaleX(.45);
+  transform-origin:left;
+  background:linear-gradient(
+    90deg,
+    var(--sv4-lime,#e8ff8a),
+    var(--sv4-mint,#a6f6db),
+    transparent
+  );
+  transition:
+    opacity .35s ease,
+    transform .55s cubic-bezier(.22,1,.36,1);
+}
+
+body.svx-page-home .sv43-hover-card:hover,
+body.svx-page-home .sv43-hover-card:focus-within{
+  transform:translateY(-6px);
+  border-color:rgba(166,246,219,.25)!important;
+  box-shadow:0 26px 54px rgba(0,0,0,.27);
+}
+
+body.svx-page-home .sv43-hover-card:hover::before,
+body.svx-page-home .sv43-hover-card:focus-within::before{
+  opacity:1;
+}
+
+body.svx-page-home .sv43-hover-card:hover::after,
+body.svx-page-home .sv43-hover-card:focus-within::after{
+  opacity:.9;
+  transform:scaleX(1);
+}
+
+body.svx-page-home .sv43-hover-card a{
+  position:relative;
+  z-index:2;
+}
+
+/* CTA hover: crisp movement rather than a generic brightness change */
+body.svx-page-home .sv43-home-cta{
+  position:relative!important;
+  overflow:hidden;
+  transform:translateY(0);
+  transition:
+    transform .38s cubic-bezier(.22,1,.36,1),
+    border-color .32s ease,
+    box-shadow .38s ease,
+    background-color .32s ease!important;
+}
+
+body.svx-page-home .sv43-home-cta::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:0;
+  background:linear-gradient(
+    110deg,
+    transparent 12%,
+    rgba(255,255,255,.08) 48%,
+    transparent 72%
+  );
+  transform:translateX(-70%);
+  transition:
+    transform .58s cubic-bezier(.22,1,.36,1),
+    opacity .25s ease;
+}
+
+body.svx-page-home .sv43-home-cta:hover,
+body.svx-page-home .sv43-home-cta:focus-visible{
+  transform:translateY(-3px);
+  border-color:rgba(232,255,138,.32)!important;
+  box-shadow:0 14px 34px rgba(0,0,0,.28);
+}
+
+body.svx-page-home .sv43-home-cta:hover::before,
+body.svx-page-home .sv43-home-cta:focus-visible::before{
+  opacity:1;
+  transform:translateX(70%);
+}
+
+/* ---------- Work: remove the remaining invisible vertical reserve ---------- */
+body.svx-page-work .sv43-cases-section,
+body.svx-page-work .sv43-case-bridge,
+body.svx-page-work .sv43-first-case-copy{
+  min-height:0!important;
+  height:auto!important;
+}
+
+body.svx-page-work .sv43-case-bridge{
+  margin-top:0!important;
+  padding-top:0!important;
+  align-content:start!important;
+  align-items:start!important;
+}
+
+body.svx-page-work .sv43-first-case-copy{
+  margin-top:1.6rem!important;
+  padding-top:0!important;
+  align-self:start!important;
+  transform:none!important;
+}
+
+@media(min-width:901px){
+  body.svx-page-work .sv43-cases-section{
+    padding-top:2.5rem!important;
+  }
+
+  body.svx-page-work .sv43-first-case-copy{
+    margin-top:2rem!important;
+    max-width:33ch!important;
+  }
+}
+
+@media(max-width:900px){
+  body.svx.sv43-polish header:first-of-type .svx-brand img{
+    width:34px!important;
+    height:34px!important;
+  }
+
+  body.svx-page-work .sv43-cases-section{
+    padding-top:2rem!important;
+    padding-bottom:2.75rem!important;
+  }
+
+  body.svx-page-work .sv43-first-case-copy{
+    margin-top:1.25rem!important;
+    padding-bottom:1rem!important;
+  }
+}
+
+/* ---------- motion preference ---------- */
+@media(prefers-reduced-motion:reduce){
+  body.svx-page-home .sv43-hover-card,
+  body.svx-page-home .sv43-home-cta,
+  body.svx.sv43-polish header:first-of-type .svx-brand img{
+    transition:none!important;
+    transform:none!important;
+  }
+
+  body.svx-page-home .sv43-hover-card::before,
+  body.svx-page-home .sv43-hover-card::after,
+  body.svx-page-home .sv43-home-cta::before{
+    display:none!important;
+  }
+}
+
+/* ===== SOURCE: sazvara-consolidation-v4-4.css ===== */
+/* SAZVARA AWARD UI V4.4 — CONSOLIDATION */
+
+/* ============================================================
+   1. RELIABILITY: content is visible by default.
+   Old reveal classes must never create giant invisible sections.
+   ============================================================ */
+body.svx.sv44 main .svx-reveal,
+body.svx.sv44 main .svx-reveal.is-visible,
+body.svx.sv44 main [class*="svx-reveal"]{
+  opacity:1!important;
+  transform:none!important;
+  visibility:visible!important;
+}
+
+/* ============================================================
+   2. GLOBAL PAGE RHYTHM
+   ============================================================ */
+body.svx.sv44 main > section{
+  box-sizing:border-box;
+}
+
+body.svx.sv44:not(.svx-page-home) main > section{
+  min-height:auto!important;
+  padding-top:clamp(4.5rem,6.5vw,7rem)!important;
+  padding-bottom:clamp(4.5rem,6.5vw,7rem)!important;
+}
+
+body.svx.sv44:not(.svx-page-home) main > section:first-child{
+  padding-top:clamp(7rem,8vw,8.5rem)!important;
+  padding-bottom:clamp(4rem,5.5vw,5.7rem)!important;
+}
+
+body.svx.sv44 main > section + section{
+  margin-top:0!important;
+}
+
+/* Homepage keeps its intentional hero + story, but ordinary later
+   sections must collapse to their content rather than full-screen. */
+body.svx-page-home main > section:not(.svx-process-story):not(.svx-hero-shell){
+  min-height:auto!important;
+  padding-top:clamp(5rem,7vw,7rem)!important;
+  padding-bottom:clamp(5rem,7vw,7rem)!important;
+}
+
+/* ============================================================
+   3. LOGO — simplified and stronger at real header size
+   ============================================================ */
+body.svx.sv44 header:first-of-type .svx-brand{
+  gap:12px!important;
+  align-items:center!important;
+}
+
+body.svx.sv44 header:first-of-type .svx-brand img{
+  width:38px!important;
+  height:38px!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  filter:
+    drop-shadow(0 0 8px rgba(166,246,219,.16))
+    drop-shadow(0 0 18px rgba(174,184,255,.08))!important;
+  transform-origin:center;
+  transition:
+    transform .42s cubic-bezier(.22,1,.36,1),
+    filter .35s ease!important;
+}
+
+body.svx.sv44 header:first-of-type .svx-brand:hover img,
+body.svx.sv44 header:first-of-type .svx-brand:focus-visible img{
+  transform:translateY(-1px) scale(1.055);
+  filter:
+    drop-shadow(0 0 12px rgba(232,255,138,.22))
+    drop-shadow(0 0 24px rgba(166,246,219,.14))!important;
+}
+
+body.svx.sv44 header:first-of-type .svx-brand-word,
+body.svx.sv44 header:first-of-type .svx-brand span{
+  font-weight:720!important;
+  letter-spacing:.18em!important;
+}
+
+/* ============================================================
+   4. HOMEPAGE HOVER — dark, luminous, not washed-out
+   ============================================================ */
+body.svx-page-home .sv44-home-card{
+  --mx:50%;
+  --my:50%;
+  position:relative!important;
+  isolation:isolate;
+  overflow:hidden;
+  color:var(--sv4-paper,#f5f3ec)!important;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,.005)),
+    #0a0c0f!important;
+  border-color:rgba(245,243,236,.16)!important;
+  transform:translateY(0);
+  transition:
+    transform .5s cubic-bezier(.22,1,.36,1),
+    border-color .35s ease,
+    box-shadow .45s ease,
+    background-color .35s ease!important;
+}
+
+body.svx-page-home .sv44-home-card::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:-1px;
+  opacity:0;
+  pointer-events:none;
+  background:
+    radial-gradient(
+      360px circle at var(--mx) var(--my),
+      rgba(166,246,219,.14),
+      rgba(174,184,255,.07) 34%,
+      transparent 69%
+    );
+  transition:opacity .38s ease;
+}
+
+body.svx-page-home .sv44-home-card::after{
+  content:"";
+  position:absolute;
+  left:22px;
+  right:22px;
+  bottom:0;
+  height:1px;
+  opacity:0;
+  transform:scaleX(.38);
+  transform-origin:left;
+  background:linear-gradient(
+    90deg,
+    #e8ff8a,
+    #a6f6db 46%,
+    #aeb8ff 72%,
+    transparent
+  );
+  transition:
+    opacity .35s ease,
+    transform .55s cubic-bezier(.22,1,.36,1);
+}
+
+body.svx-page-home .sv44-home-card:hover,
+body.svx-page-home .sv44-home-card:focus-within{
+  color:var(--sv4-paper,#f5f3ec)!important;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.028),rgba(255,255,255,.008)),
+    #0d1013!important;
+  border-color:rgba(166,246,219,.34)!important;
+  transform:translateY(-6px);
+  box-shadow:0 28px 60px rgba(0,0,0,.32);
+}
+
+body.svx-page-home .sv44-home-card:hover::before,
+body.svx-page-home .sv44-home-card:focus-within::before{
+  opacity:1;
+}
+
+body.svx-page-home .sv44-home-card:hover::after,
+body.svx-page-home .sv44-home-card:focus-within::after{
+  opacity:.95;
+  transform:scaleX(1);
+}
+
+body.svx-page-home .sv44-home-card:hover h2,
+body.svx-page-home .sv44-home-card:hover h3,
+body.svx-page-home .sv44-home-card:hover strong,
+body.svx-page-home .sv44-home-card:focus-within h2,
+body.svx-page-home .sv44-home-card:focus-within h3,
+body.svx-page-home .sv44-home-card:focus-within strong{
+  color:#fff!important;
+}
+
+body.svx-page-home .sv44-home-card:hover p,
+body.svx-page-home .sv44-home-card:focus-within p{
+  color:#b8bdb9!important;
+}
+
+body.svx-page-home .sv44-home-card .sv44-arrow{
+  display:inline-block;
+  transition:transform .42s cubic-bezier(.22,1,.36,1);
+}
+
+body.svx-page-home .sv44-home-card:hover .sv44-arrow,
+body.svx-page-home .sv44-home-card:focus-within .sv44-arrow{
+  transform:translate(5px,-5px);
+}
+
+/* ============================================================
+   5. WORK — CASE FLOW
+   ============================================================ */
+body.svx-page-work .sv44-case-section,
+body.svx-page-work .sv44-case-bridge,
+body.svx-page-work .sv44-case-copy{
+  min-height:0!important;
+  height:auto!important;
+}
+
+body.svx-page-work .sv44-case-bridge{
+  margin-top:0!important;
+  padding-top:0!important;
+  align-items:start!important;
+  align-content:start!important;
+}
+
+body.svx-page-work .sv44-case-copy{
+  margin-top:clamp(1rem,2vw,1.8rem)!important;
+  padding-top:0!important;
+  transform:none!important;
+}
+
+body.svx-page-work .sv44-case-section{
+  padding-top:clamp(2.5rem,4vw,4rem)!important;
+  padding-bottom:clamp(4rem,6vw,6rem)!important;
+}
+
+/* ============================================================
+   6. SERVICES / AGENCIES / FOUNDER
+   ============================================================ */
+body.svx-page-services main > section:not(:first-child),
+body.svx-page-agencies main > section:not(:first-child),
+body.svx-page-founder main > section:not(:first-child){
+  min-height:auto!important;
+  padding-top:clamp(4rem,6vw,6rem)!important;
+  padding-bottom:clamp(4rem,6vw,6rem)!important;
+}
+
+/* ============================================================
+   7. INSIGHTS — keep strong hierarchy, reduce mobile card bloat
+   ============================================================ */
+@media(max-width:900px){
+  body.svx.sv44 header:first-of-type .svx-brand img{
+    width:34px!important;
+    height:34px!important;
+  }
+
+  body.svx.sv44:not(.svx-page-home) main > section,
+  body.svx-page-home main > section:not(.svx-process-story):not(.svx-hero-shell){
+    min-height:auto!important;
+    padding-top:3.5rem!important;
+    padding-bottom:3.5rem!important;
+  }
+
+  body.svx.sv44:not(.svx-page-home) main > section:first-child{
+    padding-top:4.6rem!important;
+    padding-bottom:3.4rem!important;
+  }
+
+  body.svx-page-work .sv44-case-section{
+    padding-top:2.1rem!important;
+    padding-bottom:3.1rem!important;
+  }
+
+  body.svx-page-work .sv44-case-copy{
+    margin-top:1rem!important;
+  }
+
+  body.svx-page-insights .hub-card h2{
+    font-size:clamp(1.3rem,6.7vw,1.7rem)!important;
+    line-height:1.02!important;
+  }
+
+  body.svx-page-insights .hub-card{
+    padding:20px!important;
+  }
+
+  body.svx-page-insights .hub-card p{
+    font-size:.92rem!important;
+    line-height:1.5!important;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  body.svx-page-home .sv44-home-card,
+  body.svx.sv44 header:first-of-type .svx-brand img{
+    transition:none!important;
+    transform:none!important;
+  }
+
+  body.svx-page-home .sv44-home-card::before,
+  body.svx-page-home .sv44-home-card::after{
+    display:none!important;
+  }
+}
+
+/* ===== SOURCE: sazvara-final-tuning-v4-5.css ===== */
+/* SAZVARA AWARD UI V4.5 — FINAL TUNING */
+
+/* ============================================================
+   ACCESSIBLE MICRO-INTERACTION BASELINE
+   ============================================================ */
+body.svx.sv45 a:focus-visible,
+body.svx.sv45 button:focus-visible{
+  outline:2px solid rgba(232,255,138,.8)!important;
+  outline-offset:4px!important;
+}
+
+/* ============================================================
+   HOME: force premium dark hover, defeating older pale hover rules
+   ============================================================ */
+body.svx-page-home .sv45-home-card,
+body.svx-page-home .sv45-home-card:hover,
+body.svx-page-home .sv45-home-card:focus-within{
+  color:#f5f3ec!important;
+}
+
+body.svx-page-home .sv45-home-card:hover,
+body.svx-page-home .sv45-home-card:focus-within{
+  background:
+    radial-gradient(
+      420px circle at var(--sv45-mx,50%) var(--sv45-my,50%),
+      rgba(166,246,219,.13),
+      rgba(174,184,255,.055) 35%,
+      transparent 68%
+    ),
+    linear-gradient(180deg,rgba(255,255,255,.032),rgba(255,255,255,.009)),
+    #0b0e11!important;
+  background-color:#0b0e11!important;
+  border-color:rgba(166,246,219,.36)!important;
+  box-shadow:
+    0 28px 62px rgba(0,0,0,.34),
+    inset 0 0 0 1px rgba(232,255,138,.035)!important;
+  transform:translateY(-6px)!important;
+}
+
+body.svx-page-home .sv45-home-card:hover *,
+body.svx-page-home .sv45-home-card:focus-within *{
+  background-color:transparent!important;
+}
+
+body.svx-page-home .sv45-home-card:hover h2,
+body.svx-page-home .sv45-home-card:hover h3,
+body.svx-page-home .sv45-home-card:hover strong,
+body.svx-page-home .sv45-home-card:hover a,
+body.svx-page-home .sv45-home-card:focus-within h2,
+body.svx-page-home .sv45-home-card:focus-within h3,
+body.svx-page-home .sv45-home-card:focus-within strong,
+body.svx-page-home .sv45-home-card:focus-within a{
+  color:#fff!important;
+}
+
+body.svx-page-home .sv45-home-card:hover p,
+body.svx-page-home .sv45-home-card:focus-within p{
+  color:#b7bcb8!important;
+}
+
+body.svx-page-home .sv45-home-card{
+  position:relative!important;
+  overflow:hidden!important;
+  isolation:isolate;
+  transition:
+    transform .5s cubic-bezier(.22,1,.36,1),
+    border-color .35s ease,
+    box-shadow .45s ease!important;
+}
+
+body.svx-page-home .sv45-home-card::after{
+  content:"";
+  position:absolute;
+  left:22px;
+  right:22px;
+  bottom:0;
+  height:1px;
+  opacity:0;
+  transform:scaleX(.35);
+  transform-origin:left;
+  background:linear-gradient(90deg,#e8ff8a,#a6f6db 48%,#aeb8ff 72%,transparent);
+  transition:opacity .3s ease,transform .55s cubic-bezier(.22,1,.36,1);
+}
+
+body.svx-page-home .sv45-home-card:hover::after,
+body.svx-page-home .sv45-home-card:focus-within::after{
+  opacity:.95;
+  transform:scaleX(1);
+}
+
+body.svx-page-home .sv45-arrow{
+  display:inline-block!important;
+  transition:transform .42s cubic-bezier(.22,1,.36,1)!important;
+}
+
+body.svx-page-home .sv45-home-card:hover .sv45-arrow,
+body.svx-page-home .sv45-home-card:focus-within .sv45-arrow{
+  transform:translate(5px,-5px)!important;
+}
+
+/* ============================================================
+   WORK DESKTOP: turn each proof item into an editorial case row
+   ============================================================ */
+@media(min-width:901px){
+  body.svx-page-work .sv45-case{
+    display:flow-root!important;
+    min-height:0!important;
+    padding:3rem 0 3.4rem!important;
+    margin:0!important;
+    border-bottom:1px solid rgba(245,243,236,.13);
+  }
+
+  body.svx-page-work .sv45-case:last-of-type{
+    border-bottom:0;
+  }
+
+  body.svx-page-work .sv45-case .svx-project-art{
+    display:block!important;
+    float:right!important;
+    position:relative!important;
+    inset:auto!important;
+    opacity:1!important;
+    width:min(44%,430px)!important;
+    max-width:430px!important;
+    height:auto!important;
+    aspect-ratio:1.55/1!important;
+    margin:.25rem 0 1.5rem clamp(2rem,5vw,5rem)!important;
+    border-radius:22px!important;
+    transform:none!important;
+  }
+
+  body.svx-page-work .sv45-case-title{
+    margin:0 0 1.15rem!important;
+    font-size:clamp(1.65rem,2.4vw,2.2rem)!important;
+    letter-spacing:-.035em!important;
+  }
+
+  body.svx-page-work .sv45-case-copy{
+    max-width:49ch!important;
+    margin-top:0!important;
+    padding-top:0!important;
+    font-size:1rem!important;
+    line-height:1.62!important;
+  }
+
+  body.svx-page-work .sv45-case-copy p{
+    max-width:49ch!important;
+  }
+
+  /* Hide the V3 fixed stage on desktop: the inline art now carries the case.
+     This removes the remaining competition between stage and actual content. */
+  body.svx-page-work .svx-work-stage{
+    display:none!important;
+  }
+}
+
+/* Work mobile is already strong; only slightly improve spacing. */
+@media(max-width:900px){
+  body.svx-page-work .sv45-case{
+    padding-top:2rem!important;
+    padding-bottom:2.4rem!important;
+  }
+
+  body.svx-page-work .sv45-case-title{
+    margin-bottom:1rem!important;
+  }
+
+  body.svx-page-work .sv45-case-copy{
+    margin-top:1.2rem!important;
+  }
+}
+
+/* ============================================================
+   FOUNDER: editorial compression on desktop
+   ============================================================ */
+@media(min-width:901px){
+  body.svx-page-founder main > section:not(:first-child){
+    padding-top:clamp(3.8rem,5vw,5.2rem)!important;
+    padding-bottom:clamp(3.8rem,5vw,5.2rem)!important;
+  }
+
+  body.svx-page-founder .sv45-founder-copy{
+    max-width:64ch!important;
+  }
+}
+
+/* ============================================================
+   SERVICES: tighten the transition into the diagnostic section
+   ============================================================ */
+@media(min-width:901px){
+  body.svx-page-services .sv45-what-you-receive{
+    padding-bottom:clamp(3.5rem,4.5vw,4.8rem)!important;
+  }
+
+  body.svx-page-services .sv45-paid-diagnostic{
+    padding-top:clamp(4.5rem,5.5vw,5.8rem)!important;
+  }
+}
+
+/* ============================================================
+   INSIGHTS + AGENCIES: small hover finish on desktop
+   ============================================================ */
+@media(hover:hover) and (pointer:fine){
+  body.svx-page-insights .hub-card:hover{
+    transform:translateY(-5px)!important;
+    border-color:rgba(166,246,219,.25)!important;
+    box-shadow:0 20px 42px rgba(0,0,0,.22)!important;
+  }
+
+  body.svx-page-agencies .sv45-agency-card:hover{
+    transform:translateY(-4px)!important;
+    border-color:rgba(166,246,219,.24)!important;
+    box-shadow:0 18px 38px rgba(0,0,0,.22)!important;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  body.svx-page-home .sv45-home-card,
+  body.svx-page-home .sv45-arrow,
+  body.svx-page-insights .hub-card,
+  body.svx-page-agencies .sv45-agency-card{
+    transition:none!important;
+    transform:none!important;
+  }
+}
+
+/* ===== SOURCE: sazvara-hover-v4-5-1.css ===== */
+/* V4.5.1 — reliable homepage entry-card hover binding */
+body.svx-page-home a.sv451-home-card,
+body.svx-page-home a.sv451-home-card:visited{
+  text-decoration:none!important;
+}
+
+body.svx-page-home a.sv451-home-card:hover,
+body.svx-page-home a.sv451-home-card:focus-visible{
+  background:
+    radial-gradient(
+      420px circle at var(--sv45-mx,50%) var(--sv45-my,50%),
+      rgba(166,246,219,.14),
+      rgba(174,184,255,.06) 35%,
+      transparent 68%
+    ),
+    linear-gradient(180deg,rgba(255,255,255,.032),rgba(255,255,255,.009)),
+    #0b0e11!important;
+  background-color:#0b0e11!important;
+  color:#f5f3ec!important;
+  border-color:rgba(166,246,219,.38)!important;
+  box-shadow:
+    0 28px 62px rgba(0,0,0,.34),
+    inset 0 0 0 1px rgba(232,255,138,.04)!important;
+  transform:translateY(-6px)!important;
+}
+
+body.svx-page-home a.sv451-home-card:hover *,
+body.svx-page-home a.sv451-home-card:focus-visible *{
+  background-color:transparent!important;
+}
+
+body.svx-page-home a.sv451-home-card:hover h2,
+body.svx-page-home a.sv451-home-card:hover h3,
+body.svx-page-home a.sv451-home-card:hover strong,
+body.svx-page-home a.sv451-home-card:focus-visible h2,
+body.svx-page-home a.sv451-home-card:focus-visible h3,
+body.svx-page-home a.sv451-home-card:focus-visible strong{
+  color:#fff!important;
+}
+
+body.svx-page-home a.sv451-home-card:hover p,
+body.svx-page-home a.sv451-home-card:focus-visible p{
+  color:#b8bdb9!important;
+}
+
+@media(prefers-reduced-motion:reduce){
+  body.svx-page-home a.sv451-home-card:hover,
+  body.svx-page-home a.sv451-home-card:focus-visible{
+    transform:none!important;
+  }
+}
+
+/* ===== SOURCE: sazvara-hover-v4-5-2.css ===== */
+/* SAZVARA V4.5.2 — bind hover to the real Three ways in card containers */
+
+body.svx-page-home .sv452-home-card{
+  position:relative!important;
+  isolation:isolate!important;
+  overflow:hidden!important;
+  cursor:default;
+  transition:
+    transform .5s cubic-bezier(.22,1,.36,1),
+    border-color .35s ease,
+    box-shadow .45s ease!important;
+}
+
+body.svx-page-home .sv452-home-card:hover,
+body.svx-page-home .sv452-home-card:focus-within{
+  background:
+    radial-gradient(
+      420px circle at var(--sv452-mx,50%) var(--sv452-my,50%),
+      rgba(166,246,219,.15),
+      rgba(174,184,255,.065) 34%,
+      transparent 69%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.034),
+      rgba(255,255,255,.009)
+    ),
+    #0b0e11!important;
+  background-color:#0b0e11!important;
+  color:#f5f3ec!important;
+  border-color:rgba(166,246,219,.4)!important;
+  box-shadow:
+    0 28px 62px rgba(0,0,0,.34),
+    inset 0 0 0 1px rgba(232,255,138,.045)!important;
+  transform:translateY(-6px)!important;
+}
+
+body.svx-page-home .sv452-home-card:hover *,
+body.svx-page-home .sv452-home-card:focus-within *{
+  background-color:transparent!important;
+}
+
+body.svx-page-home .sv452-home-card:hover h2,
+body.svx-page-home .sv452-home-card:hover h3,
+body.svx-page-home .sv452-home-card:hover h4,
+body.svx-page-home .sv452-home-card:hover strong,
+body.svx-page-home .sv452-home-card:focus-within h2,
+body.svx-page-home .sv452-home-card:focus-within h3,
+body.svx-page-home .sv452-home-card:focus-within h4,
+body.svx-page-home .sv452-home-card:focus-within strong{
+  color:#fff!important;
+}
+
+body.svx-page-home .sv452-home-card:hover p,
+body.svx-page-home .sv452-home-card:focus-within p{
+  color:#b9beba!important;
+}
+
+body.svx-page-home .sv452-home-card::after{
+  content:"";
+  position:absolute;
+  left:22px;
+  right:22px;
+  bottom:0;
+  height:1px;
+  opacity:0;
+  transform:scaleX(.36);
+  transform-origin:left;
+  background:linear-gradient(
+    90deg,
+    #e8ff8a,
+    #a6f6db 46%,
+    #aeb8ff 72%,
+    transparent
+  );
+  transition:
+    opacity .32s ease,
+    transform .55s cubic-bezier(.22,1,.36,1);
+}
+
+body.svx-page-home .sv452-home-card:hover::after,
+body.svx-page-home .sv452-home-card:focus-within::after{
+  opacity:.95;
+  transform:scaleX(1);
+}
+
+body.svx-page-home .sv452-arrow{
+  display:inline-block!important;
+  transition:transform .42s cubic-bezier(.22,1,.36,1)!important;
+}
+
+body.svx-page-home .sv452-home-card:hover .sv452-arrow,
+body.svx-page-home .sv452-home-card:focus-within .sv452-arrow{
+  transform:translate(5px,-5px)!important;
+}
+
+@media(prefers-reduced-motion:reduce){
+  body.svx-page-home .sv452-home-card,
+  body.svx-page-home .sv452-arrow{
+    transition:none!important;
+    transform:none!important;
+  }
+}
+
+/* ===== SOURCE: sazvara-hover-v4-5-3.css ===== */
+/* SAZVARA V4.5.3 — robust Three ways in hover */
+
+body.svx-page-home .sv453-home-card{
+  position:relative!important;
+  isolation:isolate!important;
+  overflow:hidden!important;
+  transition:
+    transform .5s cubic-bezier(.22,1,.36,1),
+    border-color .35s ease,
+    box-shadow .45s ease!important;
+}
+
+body.svx-page-home .sv453-home-card:hover,
+body.svx-page-home .sv453-home-card:focus-within{
+  background:
+    radial-gradient(
+      420px circle at var(--sv453-mx,50%) var(--sv453-my,50%),
+      rgba(166,246,219,.15),
+      rgba(174,184,255,.065) 34%,
+      transparent 69%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.034),
+      rgba(255,255,255,.009)
+    ),
+    #0b0e11!important;
+  background-color:#0b0e11!important;
+  color:#f5f3ec!important;
+  border-color:rgba(166,246,219,.40)!important;
+  box-shadow:
+    0 28px 62px rgba(0,0,0,.34),
+    inset 0 0 0 1px rgba(232,255,138,.045)!important;
+  transform:translateY(-6px)!important;
+}
+
+body.svx-page-home .sv453-home-card:hover *,
+body.svx-page-home .sv453-home-card:focus-within *{
+  background-color:transparent!important;
+}
+
+body.svx-page-home .sv453-home-card:hover h2,
+body.svx-page-home .sv453-home-card:hover h3,
+body.svx-page-home .sv453-home-card:hover h4,
+body.svx-page-home .sv453-home-card:hover strong,
+body.svx-page-home .sv453-home-card:focus-within h2,
+body.svx-page-home .sv453-home-card:focus-within h3,
+body.svx-page-home .sv453-home-card:focus-within h4,
+body.svx-page-home .sv453-home-card:focus-within strong{
+  color:#fff!important;
+}
+
+body.svx-page-home .sv453-home-card:hover p,
+body.svx-page-home .sv453-home-card:focus-within p{
+  color:#b9beba!important;
+}
+
+body.svx-page-home .sv453-home-card::after{
+  content:"";
+  position:absolute;
+  left:22px;
+  right:22px;
+  bottom:0;
+  height:1px;
+  opacity:0;
+  transform:scaleX(.36);
+  transform-origin:left;
+  background:linear-gradient(
+    90deg,
+    #e8ff8a,
+    #a6f6db 46%,
+    #aeb8ff 72%,
+    transparent
+  );
+  transition:
+    opacity .32s ease,
+    transform .55s cubic-bezier(.22,1,.36,1);
+}
+
+body.svx-page-home .sv453-home-card:hover::after,
+body.svx-page-home .sv453-home-card:focus-within::after{
+  opacity:.95;
+  transform:scaleX(1);
+}
+
+body.svx-page-home .sv453-arrow{
+  display:inline-block!important;
+  transition:transform .42s cubic-bezier(.22,1,.36,1)!important;
+}
+
+body.svx-page-home .sv453-home-card:hover .sv453-arrow,
+body.svx-page-home .sv453-home-card:focus-within .sv453-arrow{
+  transform:translate(5px,-5px)!important;
+}
+
+@media(prefers-reduced-motion:reduce){
+  body.svx-page-home .sv453-home-card,
+  body.svx-page-home .sv453-arrow{
+    transition:none!important;
+    transform:none!important;
+  }
+}
+
+/* ===== SOURCE: FINAL MICRO-POLISH ===== */
+/* ============================================================
+   SAZVARA FINAL MICRO-POLISH
+   Appended after the proven V1–V4.5.3 cascade during flattening.
+   ============================================================ */
+
+/* HOME — preserve the intentional light proof cards but restore
+   strong accessible text contrast. */
+body.svx-page-home .proof-grid .project:not(.dark){
+  background:#e8e5dc!important;
+  color:#111418!important;
+  border-color:rgba(17,20,24,.16)!important;
+}
+
+body.svx-page-home .proof-grid .project:not(.dark) small,
+body.svx-page-home .proof-grid .project:not(.dark) h2,
+body.svx-page-home .proof-grid .project:not(.dark) h3,
+body.svx-page-home .proof-grid .project:not(.dark) strong,
+body.svx-page-home .proof-grid .project:not(.dark) span{
+  color:#111418!important;
+}
+
+body.svx-page-home .proof-grid .project:not(.dark) p{
+  color:#555b59!important;
+}
+
+/* WORK — let case evidence breathe a little more on desktop
+   without returning to the oversized V3 stage. */
+@media(min-width:901px){
+  body.svx-page-work .sv45-case-copy{
+    width:min(55%,58ch)!important;
+    max-width:58ch!important;
+    font-size:1rem!important;
+    line-height:1.64!important;
+  }
+
+  body.svx-page-work .sv45-case-copy p,
+  body.svx-page-work .sv45-case-copy div{
+    max-width:58ch!important;
+  }
+
+  body.svx-page-work .sv45-case .svx-project-art{
+    width:min(45%,470px)!important;
+    max-width:470px!important;
+  }
+}
+
+/* AGENCIES — keep consent / privacy text horizontal and readable.
+   This fixes the narrow vertical text column visible beside the form. */
+body.svx-page-agencies form label:has(input[type="checkbox"]),
+body.svx-page-agencies form .consent,
+body.svx-page-agencies form [class*="consent"]{
+  display:grid!important;
+  grid-template-columns:auto minmax(0,1fr)!important;
+  align-items:start!important;
+  gap:.7rem!important;
+  width:100%!important;
+  max-width:none!important;
+  min-width:0!important;
+  writing-mode:horizontal-tb!important;
+  text-orientation:mixed!important;
+}
+
+body.svx-page-agencies form label:has(input[type="checkbox"]) input[type="checkbox"],
+body.svx-page-agencies form .consent input[type="checkbox"],
+body.svx-page-agencies form [class*="consent"] input[type="checkbox"]{
+  width:1rem!important;
+  height:1rem!important;
+  margin:.18rem 0 0!important;
+}
+
+body.svx-page-agencies form label:has(input[type="checkbox"]) span,
+body.svx-page-agencies form label:has(input[type="checkbox"]) small,
+body.svx-page-agencies form .consent span,
+body.svx-page-agencies form .consent small,
+body.svx-page-agencies form [class*="consent"] span,
+body.svx-page-agencies form [class*="consent"] small{
+  display:block!important;
+  width:auto!important;
+  max-width:none!important;
+  min-width:0!important;
+  white-space:normal!important;
+  overflow-wrap:anywhere!important;
+}
+
+/* INSIGHTS — preserve editorial impact while reducing excessive
+   mobile title wrapping. */
+@media(max-width:520px){
+  body.svx-page-insights .hub-card h2{
+    font-size:clamp(1.12rem,5.7vw,1.38rem)!important;
+    line-height:1.04!important;
+    letter-spacing:-.025em!important;
+  }
+
+  body.svx-page-insights .hub-card{
+    padding:18px!important;
+  }
+}
+
+/* FOUNDER — one final desktop rhythm refinement. */
+@media(min-width:901px){
+  body.svx-page-founder main > section:not(:first-child){
+    padding-top:clamp(3.5rem,4.5vw,4.8rem)!important;
+    padding-bottom:clamp(3.5rem,4.5vw,4.8rem)!important;
+  }
+}

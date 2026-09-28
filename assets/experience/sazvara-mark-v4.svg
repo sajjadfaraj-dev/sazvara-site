@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="t d">
+<title id="t">Sazvara</title>
+<desc id="d">A continuous S-shaped system path with two control nodes.</desc>
+<defs>
+  <linearGradient id="g" x1="15" y1="12" x2="81" y2="86" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#EAFF8E"/>
+    <stop offset=".48" stop-color="#9FF2D6"/>
+    <stop offset="1" stop-color="#AAB5FF"/>
+  </linearGradient>
+</defs>
+<path
+  d="M72.5 24.2
+     C66.8 16.2 58.4 12.2 47.5 12.2
+     C30.2 12.2 18.5 20.7 18.5 33.5
+     C18.5 45.0 27.1 51.0 47.6 55.8
+     C62.1 59.2 69.3 63.1 69.3 70.2
+     C69.3 78.9 61.2 84.1 49.2 84.1
+     C37.0 84.1 27.0 79.6 20.1 70.0"
+  fill="none"
+  stroke="url(#g)"
+  stroke-width="9.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"/>
+<path d="M27 29.1h30.5M38.2 68.2h29.8"
+      fill="none"
+      stroke="#F5F3EC"
+      stroke-opacity=".30"
+      stroke-width="1.55"
+      stroke-linecap="round"/>
+<circle cx="22.7" cy="29.1" r="4.15" fill="#080A0D" stroke="#EAFF8E" stroke-width="2.1"/>
+<circle cx="72.1" cy="68.2" r="4.15" fill="#080A0D" stroke="#AAB5FF" stroke-width="2.1"/>
+</svg>
