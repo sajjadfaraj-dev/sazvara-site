@@ -2480,3 +2480,375 @@ body.svx-page-agencies form [class*="consent"] small{
     padding-bottom:clamp(3.5rem,4.5vw,4.8rem)!important;
   }
 }
+
+
+/* ============================================================
+   SAZVARA AWARD UI V5.1 — CONTRAST + CTA SPACING
+   Goal: restore the cleaner readability and breathing room of the
+   earlier visual direction without changing page structure/content.
+   ============================================================ */
+
+:root{
+  --sv51-text:#bec2bd;
+  --sv51-text-strong:#d3d6d0;
+  --sv51-muted:#aeb3af;
+  --sv51-line:rgba(245,243,236,.20);
+  --sv51-button:#f1efe8;
+  --sv51-button-ink:#111416;
+  --sv51-ghost-bg:rgba(245,243,236,.028);
+}
+
+/* ---------- Readability: dark surfaces ---------- */
+body.svx main p,
+body.svx main li,
+body.svx main dd{
+  color:var(--sv51-text)!important;
+}
+
+body.svx main .lead,
+body.svx-page-insights .hub-hero .hub-intro{
+  color:#c8cbc5!important;
+}
+
+body.svx main .eyebrow,
+body.svx main .num,
+body.svx main small,
+body.svx .svx-kicker,
+body.svx .svx-section-number,
+body.svx-page-insights .hub-score{
+  color:var(--sv51-muted)!important;
+  opacity:1!important;
+}
+
+body.svx-page-insights .hub-card p{
+  color:#b7bbb7!important;
+}
+
+body.svx-page-insights .hub-score{
+  color:#b4b9b4!important;
+}
+
+body.svx-page-home .sv453-home-card p,
+body.svx-page-home .sv452-home-card p,
+body.svx-page-home .sv45-home-card p,
+body.svx-page-home .sv44-home-card p{
+  color:#bfc3bf!important;
+}
+
+body.svx main .statement p,
+body.svx main [class*="statement"] p{
+  color:#b9bdb8!important;
+}
+
+body.svx footer,
+body.svx footer p,
+body.svx footer div{
+  color:#929894!important;
+}
+
+/* ---------- Cleaner edge definition ---------- */
+body.svx main .card,
+body.svx-page-insights .hub-card,
+body.svx-page-home .sv453-home-card,
+body.svx-page-home .sv452-home-card,
+body.svx-page-home .sv45-home-card,
+body.svx-page-home .sv44-home-card{
+  border-color:var(--sv51-line)!important;
+}
+
+body.svx main hr,
+body.svx main .rule,
+body.svx main [class*="rule"]{
+  border-color:rgba(245,243,236,.17)!important;
+}
+
+/* ---------- CTA groups: restore breathing room ---------- */
+body.svx main .actions{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  align-items:center!important;
+  gap:.72rem!important;
+  margin-top:1.25rem!important;
+  margin-bottom:.15rem!important;
+}
+
+body.svx main .actions > .button,
+body.svx main .actions > .button-ghost,
+body.svx main a.button,
+body.svx main a.button-ghost,
+body.svx main button.button,
+body.svx main button.button-ghost{
+  box-sizing:border-box!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:44px!important;
+  padding:.72rem 1.08rem!important;
+  margin:0!important;
+  border-radius:999px!important;
+  font-size:.88rem!important;
+  font-weight:700!important;
+  line-height:1.12!important;
+  text-decoration:none!important;
+  text-align:center!important;
+  opacity:1!important;
+}
+
+body.svx main .actions > .button,
+body.svx main a.button,
+body.svx main button.button{
+  color:var(--sv51-button-ink)!important;
+  background:var(--sv51-button)!important;
+  border:1px solid var(--sv51-button)!important;
+  box-shadow:none!important;
+}
+
+body.svx main .actions > .button-ghost,
+body.svx main a.button-ghost,
+body.svx main button.button-ghost{
+  color:#f5f3ec!important;
+  background:var(--sv51-ghost-bg)!important;
+  border:1px solid rgba(245,243,236,.28)!important;
+  box-shadow:none!important;
+}
+
+body.svx main .actions > .button:hover,
+body.svx main .actions > .button:focus-visible,
+body.svx main a.button:hover,
+body.svx main a.button:focus-visible,
+body.svx main button.button:hover,
+body.svx main button.button:focus-visible{
+  color:#0c0f11!important;
+  background:#fffdf6!important;
+  border-color:#fffdf6!important;
+  opacity:1!important;
+  transform:translateY(-1px)!important;
+}
+
+body.svx main .actions > .button-ghost:hover,
+body.svx main .actions > .button-ghost:focus-visible,
+body.svx main a.button-ghost:hover,
+body.svx main a.button-ghost:focus-visible,
+body.svx main button.button-ghost:hover,
+body.svx main button.button-ghost:focus-visible{
+  color:#fff!important;
+  background:rgba(245,243,236,.065)!important;
+  border-color:rgba(245,243,236,.46)!important;
+  opacity:1!important;
+  transform:translateY(-1px)!important;
+}
+
+/* The header already had a strong CTA; only normalize its breathing room. */
+body.svx header:first-of-type .svx-header-cta,
+body.svx header:first-of-type a.nav-cta{
+  min-height:44px!important;
+  padding-left:1.2rem!important;
+  padding-right:1.2rem!important;
+}
+
+/* ---------- Light proof cards must stay dark-on-light ---------- */
+body.svx-page-home .proof-grid .project:not(.dark){
+  background:#ebe8df!important;
+  color:#111418!important;
+  border-color:rgba(17,20,24,.20)!important;
+}
+
+body.svx-page-home .proof-grid .project:not(.dark) small,
+body.svx-page-home .proof-grid .project:not(.dark) .eyebrow,
+body.svx-page-home .proof-grid .project:not(.dark) .num,
+body.svx-page-home .proof-grid .project:not(.dark) h2,
+body.svx-page-home .proof-grid .project:not(.dark) h3,
+body.svx-page-home .proof-grid .project:not(.dark) strong,
+body.svx-page-home .proof-grid .project:not(.dark) span{
+  color:#171a1c!important;
+}
+
+body.svx-page-home .proof-grid .project:not(.dark) p{
+  color:#484e4b!important;
+}
+
+/* ---------- Mobile: keep CTAs touchable without becoming bulky ---------- */
+@media(max-width:760px){
+  body.svx main p,
+  body.svx main li,
+  body.svx main dd{
+    color:#c1c5c0!important;
+  }
+
+  body.svx main .actions{
+    gap:.62rem!important;
+    margin-top:1.05rem!important;
+  }
+
+  body.svx main .actions > .button,
+  body.svx main .actions > .button-ghost,
+  body.svx main a.button,
+  body.svx main a.button-ghost,
+  body.svx main button.button,
+  body.svx main button.button-ghost{
+    min-height:44px!important;
+    padding:.72rem 1rem!important;
+    font-size:.86rem!important;
+  }
+
+  body.svx-page-insights .hub-card p{
+    color:#bcc0bc!important;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  body.svx main .actions > .button,
+  body.svx main .actions > .button-ghost,
+  body.svx main a.button,
+  body.svx main a.button-ghost,
+  body.svx main button.button,
+  body.svx main button.button-ghost{
+    transform:none!important;
+    transition:none!important;
+  }
+}
+
+
+
+/* ============================================================
+   SAZVARA AWARD UI V5.2 — READABILITY + CTA RHYTHM
+   Purpose: refine the already-validated V5.1 direction without
+   changing HTML, JS, content, information architecture or behavior.
+   ============================================================ */
+
+:root{
+  --sv52-text:#c9cdc8;
+  --sv52-lead:#d2d5cf;
+  --sv52-muted:#b9beb9;
+  --sv52-line:rgba(245,243,236,.22);
+}
+
+/* ---------- Readability: make the dark theme feel deliberate, not dim ---------- */
+body.svx main p,
+body.svx main li,
+body.svx main dd{
+  color:var(--sv52-text)!important;
+}
+
+body.svx main .lead,
+body.svx-page-insights .hub-hero .hub-intro{
+  color:var(--sv52-lead)!important;
+}
+
+body.svx main .eyebrow,
+body.svx main .num,
+body.svx main small,
+body.svx .svx-kicker,
+body.svx .svx-section-number{
+  color:var(--sv52-muted)!important;
+  opacity:1!important;
+}
+
+/* Insights had sufficient numeric contrast in V5.1 but still looked visually soft. */
+body.svx-page-insights .hub-card p{
+  color:#c6cac6!important;
+}
+
+body.svx-page-insights .hub-score{
+  color:#bec4be!important;
+  opacity:1!important;
+}
+
+/* Dark green proof cards were the closest-to-threshold elements in V5.1. */
+body.svx-page-home .proof-grid .project.dark p{
+  color:#d3d7d1!important;
+}
+
+body.svx-page-home .proof-grid .project.dark small,
+body.svx-page-home .proof-grid .project.dark .eyebrow,
+body.svx-page-home .proof-grid .project.dark .num,
+body.svx-page-home .proof-grid .project.dark span{
+  color:#c8cdc8!important;
+}
+
+body.svx-page-home .proof-grid .project.dark h2,
+body.svx-page-home .proof-grid .project.dark h3,
+body.svx-page-home .proof-grid .project.dark strong{
+  color:#f7f5ee!important;
+}
+
+/* Preserve V5.1's clean dark-on-light treatment. */
+body.svx-page-home .proof-grid .project:not(.dark) p{
+  color:#404743!important;
+}
+
+/* ---------- Edges: slightly clearer without turning the UI into boxes ---------- */
+body.svx main .card,
+body.svx-page-insights .hub-card,
+body.svx-page-home .sv453-home-card,
+body.svx-page-home .sv452-home-card,
+body.svx-page-home .sv45-home-card,
+body.svx-page-home .sv44-home-card{
+  border-color:var(--sv52-line)!important;
+}
+
+/* ---------- CTA rhythm: more air around actions, not oversized controls ---------- */
+body.svx main .actions{
+  gap:.8rem!important;
+  margin-top:1.5rem!important;
+  margin-bottom:.5rem!important;
+}
+
+body.svx main .hero .actions,
+body.svx main .page-hero .actions,
+body.svx main .cta .actions{
+  margin-top:1.6rem!important;
+}
+
+body.svx main .actions > .button,
+body.svx main .actions > .button-ghost,
+body.svx main a.button,
+body.svx main a.button-ghost,
+body.svx main button.button,
+body.svx main button.button-ghost{
+  min-height:44px!important;
+  padding:.74rem 1.16rem!important;
+}
+
+/* ---------- Mobile: calmer cards and breathing room around CTAs ---------- */
+@media(max-width:760px){
+  body.svx main p,
+  body.svx main li,
+  body.svx main dd{
+    color:#cbd0ca!important;
+  }
+
+  body.svx main .actions{
+    gap:.7rem!important;
+    margin-top:1.25rem!important;
+    margin-bottom:.55rem!important;
+  }
+
+  body.svx main .hero .actions,
+  body.svx main .page-hero .actions,
+  body.svx main .cta .actions{
+    margin-top:1.35rem!important;
+  }
+
+  body.svx-page-insights .hub-card h2{
+    font-size:clamp(1.18rem,5.5vw,1.42rem)!important;
+    line-height:1.06!important;
+    margin:.72rem 0 .72rem!important;
+  }
+
+  body.svx-page-insights .hub-card p{
+    color:#c8ccc8!important;
+    line-height:1.55!important;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  body.svx main .actions > .button,
+  body.svx main .actions > .button-ghost,
+  body.svx main a.button,
+  body.svx main a.button-ghost{
+    transition:none!important;
+    transform:none!important;
+  }
+}
+
