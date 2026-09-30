@@ -1,0 +1,38 @@
+/* Sazvara Persian portfolio refresh v2 — scoped to .svr-portfolio-v2 */
+.svr-portfolio-v2{--p-bg:#f3f1eb;--p-card:#fff;--p-ink:#1e2b33;--p-muted:#66737a;--p-accent:#1d6f6b;--p-line:#d8ddd9;direction:rtl;color:var(--p-ink);font-family:inherit}
+.svr-portfolio-v2 *{box-sizing:border-box}
+.svr-portfolio-v2 a{color:inherit}
+.svr-portfolio-v2 .svr-shell{width:min(1120px,calc(100% - 32px));margin:0 auto}
+.svr-portfolio-v2 .svr-hero{padding:72px 0 38px}
+.svr-portfolio-v2 .svr-eyebrow{font-size:.82rem;font-weight:800;color:var(--p-accent);letter-spacing:.02em;margin:0 0 12px}
+.svr-portfolio-v2 h1{font-size:clamp(2rem,5vw,4.4rem);line-height:1.15;letter-spacing:-.035em;margin:0 0 18px;max-width:900px}
+.svr-portfolio-v2 .svr-lead{font-size:clamp(1.02rem,1.8vw,1.24rem);line-height:2;max-width:830px;color:#35464e;margin:0}
+.svr-portfolio-v2 .svr-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.svr-portfolio-v2 .svr-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:999px;text-decoration:none;font-weight:800;border:1px solid var(--p-line);background:#fff}
+.svr-portfolio-v2 .svr-btn-primary{background:var(--p-ink);color:#fff;border-color:var(--p-ink)}
+.svr-portfolio-v2 .svr-section{padding:42px 0;border-top:1px solid var(--p-line)}
+.svr-portfolio-v2 .svr-section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.7fr);gap:34px;align-items:end;margin-bottom:24px}
+.svr-portfolio-v2 .svr-section h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.3;margin:0}
+.svr-portfolio-v2 .svr-section-head p{color:var(--p-muted);line-height:1.9;margin:0}
+.svr-portfolio-v2 .svr-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.svr-portfolio-v2 .svr-card{background:var(--p-card);border:1px solid var(--p-line);border-radius:22px;padding:24px;min-height:100%;box-shadow:0 10px 34px rgba(26,44,52,.045)}
+.svr-portfolio-v2 .svr-card-feature{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.78fr);gap:30px;align-items:center}
+.svr-portfolio-v2 .svr-kicker{font-size:.78rem;font-weight:900;color:var(--p-accent);margin:0 0 8px}
+.svr-portfolio-v2 .svr-card h3{font-size:1.3rem;line-height:1.45;margin:0 0 10px}
+.svr-portfolio-v2 .svr-card p{color:#42535b;line-height:1.9;margin:0 0 14px}
+.svr-portfolio-v2 .svr-list{margin:0;padding:0 1.05rem 0 0;color:#42535b;line-height:1.95}
+.svr-portfolio-v2 .svr-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.svr-portfolio-v2 .svr-link{font-weight:800;color:var(--p-accent);text-decoration:none;border-bottom:1px solid rgba(29,111,107,.28)}
+.svr-portfolio-v2 .svr-preview{background:#eef3f2;border:1px solid var(--p-line);border-radius:18px;padding:12px}
+.svr-portfolio-v2 .svr-preview img{display:block;width:100%;height:auto;border-radius:10px}
+.svr-portfolio-v2 .svr-note{font-size:.9rem;color:var(--p-muted);margin-top:10px}
+.svr-portfolio-v2 .svr-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.svr-portfolio-v2 .svr-step{background:#fff;border:1px solid var(--p-line);border-radius:18px;padding:18px}
+.svr-portfolio-v2 .svr-step b{display:block;color:var(--p-accent);font-size:.82rem;margin-bottom:8px}
+.svr-portfolio-v2 .svr-step span{line-height:1.7;font-weight:700}
+.svr-portfolio-v2 .svr-cta{padding:32px;border-radius:26px;background:#1e2b33;color:#fff}
+.svr-portfolio-v2 .svr-cta h2{color:#fff;margin-bottom:10px}
+.svr-portfolio-v2 .svr-cta p{color:#d8e0e3;max-width:760px;line-height:1.9}
+.svr-portfolio-v2 .svr-cta .svr-btn{background:#fff;color:#1e2b33;border-color:#fff}
+@media(max-width:780px){.svr-portfolio-v2 .svr-section-head,.svr-portfolio-v2 .svr-card-feature{grid-template-columns:1fr}.svr-portfolio-v2 .svr-grid{grid-template-columns:1fr}.svr-portfolio-v2 .svr-card-feature{grid-column:auto}.svr-portfolio-v2 .svr-steps{grid-template-columns:1fr 1fr}.svr-portfolio-v2 .svr-hero{padding-top:48px}}
+@media(max-width:520px){.svr-portfolio-v2 .svr-shell{width:min(100% - 22px,1120px)}.svr-portfolio-v2 .svr-steps{grid-template-columns:1fr}.svr-portfolio-v2 .svr-card{padding:19px}.svr-portfolio-v2 .svr-cta{padding:22px}}
